@@ -1,0 +1,4 @@
+id,name,description,created_at,updated_at
+bdd640fb-0667-4ad1-9c80-317fa3b1799d,admin,Full system access and configuration privileges.,2025-06-28T14:01:51.237668+00:00,2025-06-28T14:01:51.237668+00:00
+23b8c1e9-3924-46de-beb1-3b9046685257,support_agent,Handles customer support tickets and escalations.,2023-02-05T13:52:01.859887+00:00,2023-02-05T13:52:01.859887+00:00
+bd9c66b3-ad3c-4d6d-9a3d-1fa7bc8960a9,operations_manager,"Oversees orders, fulfillment, and operational KPIs.",2024-01-27T05:30:03.344838+00:00,2024-01-27T05:30:03.344838+00:00

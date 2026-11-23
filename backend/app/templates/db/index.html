@@ -1,0 +1,16 @@
+{% extends "db/base.html" %}
+{% block title %}Tables{% endblock %}
+{% block heading %}Database tables{% endblock %}
+{% block content %}
+<p class="meta" style="margin: 0 0 18px;">
+  Click a table to browse rows. Total tables: <strong>{{ tables|length }}</strong>
+</p>
+<div class="table-list">
+  {% for table in tables %}
+  <a class="table-card" href="/db/{{ table.name }}">
+    <strong>{{ table.name }}</strong>
+    <div class="meta">{{ table.count }} rows · {{ table.columns|length }} columns</div>
+  </a>
+  {% endfor %}
+</div>
+{% endblock %}

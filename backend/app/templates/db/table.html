@@ -1,0 +1,49 @@
+{% extends "db/base.html" %}
+{% block title %}{{ table.name }}{% endblock %}
+{% block heading %}{{ table.name }}{% endblock %}
+{% block content %}
+<div class="card">
+  <div class="toolbar">
+    <div class="meta">
+      Showing
+      <strong>{{ table.offset + 1 }}–{{ table.offset + table.rows|length }}</strong>
+      of <strong>{{ table.total }}</strong> rows
+    </div>
+    <div class="pager">
+      <a class="btn" {% if not table.has_prev %}disabled{% endif %}
+         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.prev_offset }}">← Prev</a>
+      <a class="btn" {% if not table.has_next %}disabled{% endif %}
+         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.next_offset }}">Next →</a>
+      <a class="btn primary" href="/db">All tables</a>
+    </div>
+  </div>
+  <div class="scroll">
+    <table>
+      <thead>
+        <tr>
+          {% for col in table.columns %}
+          <th>{{ col }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in table.rows %}
+        <tr>
+          {% for col in table.columns %}
+          <td class="mono">
+            {% if row[col] is none %}
+              <span class="null">NULL</span>
+            {% else %}
+              {{ row[col] }}
+            {% endif %}
+          </td>
+          {% endfor %}
+        </tr>
+        {% else %}
+        <tr><td colspan="{{ table.columns|length }}">No rows</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}
