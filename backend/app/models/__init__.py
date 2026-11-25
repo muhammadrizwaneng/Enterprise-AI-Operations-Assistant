@@ -2,6 +2,7 @@
 
 from app.models.conversation import Conversation, Message
 from app.models.customer import Customer
+from app.models.document_embedding import DocumentEmbedding
 from app.models.order import Order
 from app.models.order_item import OrderItem
 from app.models.payment import Payment
@@ -21,4 +22,5 @@ __all__ = [
     "SupportTicket",
     "Conversation",
     "Message",
+    "DocumentEmbedding",
 ]

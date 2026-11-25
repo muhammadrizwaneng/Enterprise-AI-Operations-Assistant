@@ -1,0 +1,1991 @@
+{
+  "meta": {
+    "source_artifact": "/tmp/rag_neighbor_live_validation.json",
+    "source_timestamp_utc": "2026-11-24T06:17:46.135588+00:00",
+    "method": "Human rubric scoring of captured live OFF/ON answers; not LLM-as-judge",
+    "settings_held_constant": [
+      "questions",
+      "llama3.2",
+      "rag_system_prompt",
+      "rag_temperature=0.2",
+      "rag_top_k=5",
+      "rag_min_similarity=0.5",
+      "nomic-embed-text",
+      "DB embeddings"
+    ],
+    "only_changed": "rag_neighbor_expansion_enabled"
+  },
+  "rubric_note": {
+    "unsupported_claims": "4 = no unsupported claims; 0 = many/severe fabrications"
+  },
+  "queries": {
+    "Q1": {
+      "off": {
+        "answer": "According to the provided CONTEXT, the typical transit time for NovaForge's shipping methods is:\n\n* Standard Ground: 3\u20137 business days\n* In-stock items: warehouse processing within 1\u20132 business days after payment confirmation.\n* Back-ordered items: customer receives an estimated ship date within 24 hours of order confirmation.\n\nAdditionally, orders placed after 15:00 local warehouse time are processed the next business day.",
+        "context_char_len": 4369,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "delivery_policy.md#6",
+          "delivery_policy.md#4",
+          "delivery_policy.md#1",
+          "delivery_policy.md#0",
+          "delivery_policy.md#5"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#1"
+        ],
+        "primary_missing_from_context": [
+          "delivery_policy.md#2"
+        ],
+        "key_phrase_in_context": {
+          "Standard Ground": true,
+          "3\u20137 business days": true,
+          "7 calendar days": true,
+          "photographic evidence": false,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": false,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "delivery_policy.md#6",
+            "similarity": 0.5887,
+            "expanded_from": null,
+            "text_len": 420,
+            "preview": "er.  ## 8. Signature & Restricted Delivery  Orders above **$1,000.00** require adult signature confirmation unless the customer opts out in writing. High-risk destinations may requ"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.5861,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "delivery_policy.md#1",
+            "similarity": 0.5843,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "exception handling for delayed or overdue orders.  ## 2. Processing Times  - **In-stock items:** warehouse processing within **1\u20132 business days** after payment confirmation. - **B"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "delivery_policy.md#0",
+            "similarity": 0.5736,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Delivery Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-DEL-002   **Effective Date:** March 1, 2025   **Last Updated:** October 15, 2026   **Owner:** "
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "delivery_policy.md#5",
+            "similarity": 0.5663,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ed shipped or processing.  Support agents must:  1. Verify carrier tracking. 2. Contact the carrier within one business day. 3. Offer a replacement or refund if the package is conf"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "Processing, 15:00, Standard Ground 3\u20137 match CONTEXT; no invented total delivery guarantee."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "Covers processing + Standard Ground + 15:00; full method table (Expedited/Overnight/Freight) absent because #2 not in context."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses facts present in retrieved #1 (and truncated Standard Ground)."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "No phone/email/total SLA inventions."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Distinguishes processing vs transit implicitly; does not overclaim universal total."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "On-topic for delivery duration."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Answer aligns with attributed delivery_policy sources; no contradiction with listed sources."
+          }
+        },
+        "total": 26,
+        "mean": 3.7142857142857144
+      },
+      "on": {
+        "answer": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, and Overnight shipping takes 1 business day.",
+        "context_char_len": 5571,
+        "context_block_count": 7,
+        "neighbor_count": 2,
+        "sources": [
+          "delivery_policy.md#6",
+          "delivery_policy.md#4",
+          "delivery_policy.md#1",
+          "delivery_policy.md#0",
+          "delivery_policy.md#5"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#1",
+          "delivery_policy.md#2"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": true,
+          "3\u20137 business days": true,
+          "7 calendar days": true,
+          "photographic evidence": false,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": false,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "delivery_policy.md#6",
+            "similarity": 0.5887,
+            "expanded_from": null,
+            "text_len": 420,
+            "preview": "er.  ## 8. Signature & Restricted Delivery  Orders above **$1,000.00** require adult signature confirmation unless the customer opts out in writing. High-risk destinations may requ"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.5861,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 3,
+            "role": "neighbor_previous",
+            "label": "delivery_policy.md#3",
+            "similarity": null,
+            "expanded_from": 4,
+            "text_len": 500,
+            "preview": "d shipping within the contiguous service area. Expedited and overnight upgrades remain chargeable.  Standard flat shipping for below-threshold orders is **$9.99**.  ## 5. Delivery "
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "delivery_policy.md#1",
+            "similarity": 0.5843,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "exception handling for delayed or overdue orders.  ## 2. Processing Times  - **In-stock items:** warehouse processing within **1\u20132 business days** after payment confirmation. - **B"
+          },
+          {
+            "n": 5,
+            "role": "neighbor_next",
+            "label": "delivery_policy.md#2",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 400,
+            "preview": "t domestic | | Expedited | 2\u20133 business days | Priority business orders | | Overnight | Next business day | Urgent replacements | | Freight | Scheduled | Large furniture / bulk |  "
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "delivery_policy.md#0",
+            "similarity": 0.5736,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Delivery Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-DEL-002   **Effective Date:** March 1, 2025   **Last Updated:** October 15, 2026   **Owner:** "
+          },
+          {
+            "n": 7,
+            "role": "retrieved",
+            "label": "delivery_policy.md#5",
+            "similarity": 0.5663,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ed shipped or processing.  Support agents must:  1. Verify carrier tracking. 2. Contact the carrier within one business day. 3. Offer a replacement or refund if the package is conf"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 3,
+            "rationale": "Standard/Expedited transit correct; Overnight said as '1 business day' vs doc 'Next business day' (minor drift). Processing/15:00 omitted despite still in retrieved #1."
+          },
+          "completeness": {
+            "score": 2,
+            "rationale": "Adds Expedited/Overnight from neighbor #2 but drops processing 1\u20132 days and 15:00 cutoff that OFF included and that remain in CONTEXT."
+          },
+          "evidence_utilization": {
+            "score": 2,
+            "rationale": "Uses expanded table; underuses retrieved processing/#15:00 evidence still present in context blocks."
+          },
+          "unsupported_claims": {
+            "score": 3,
+            "rationale": "No major fabrications; Overnight wording slightly imprecise vs table."
+          },
+          "conditions_exceptions": {
+            "score": 2,
+            "rationale": "Misses order-after-15:00 next-day processing condition."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Still about shipping durations."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Sources list unchanged; neighbors marked supporting in context, not falsely attributed as ranked hits."
+          }
+        },
+        "total": 20,
+        "mean": 2.857142857142857
+      }
+    },
+    "Q2": {
+      "off": {
+        "answer": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund.",
+        "context_char_len": 4449,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "delivery_policy.md#4",
+          "delivery_policy.md#1",
+          "delivery_policy.md#5",
+          "employee_handbook.md#5",
+          "refund_policy.md#1"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#4",
+          "delivery_policy.md#5"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": true,
+          "3\u20137 business days": true,
+          "7 calendar days": true,
+          "photographic evidence": true,
+          "Submit PTO": true,
+          "Ticket Categories": false,
+          "refund_request": false,
+          "VPN": true,
+          "OS patches": true
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.7351,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "delivery_policy.md#1",
+            "similarity": 0.6359,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "exception handling for delayed or overdue orders.  ## 2. Processing Times  - **In-stock items:** warehouse processing within **1\u20132 business days** after payment confirmation. - **B"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "delivery_policy.md#5",
+            "similarity": 0.6183,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ed shipped or processing.  Support agents must:  1. Verify carrier tracking. 2. Contact the carrier within one business day. 3. Offer a replacement or refund if the package is conf"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "employee_handbook.md#5",
+            "similarity": 0.6074,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "irmation or documented no-response after **5 business days**.  ## 7. Time Off  - Submit PTO requests at least **7 days** in advance when possible. - Emergency leave should be repor"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6056,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "States verify tracking, contact carrier within one business day, offer replacement/refund after 7 calendar days lost \u2014 matches #5."
+          },
+          "completeness": {
+            "score": 4,
+            "rationale": "Full three support-agent steps present."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses #5 procedure present in top-5."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "No invented channels or automatic guarantees beyond policy."
+          },
+          "conditions_exceptions": {
+            "score": 4,
+            "rationale": "Preserves 'confirmed lost after 7 calendar days' condition."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Directly answers overdue/seven-day question."
+          },
+          "source_consistency": {
+            "score": 3,
+            "rationale": "Answer grounded in delivery #5; handbook/refund also retrieved but not polluted into answer."
+          }
+        },
+        "total": 27,
+        "mean": 3.857142857142857
+      },
+      "on": {
+        "answer": "If a package is overdue by 7 calendar days, support agents must offer a replacement or refund to the customer.",
+        "context_char_len": 8901,
+        "context_block_count": 13,
+        "neighbor_count": 8,
+        "sources": [
+          "delivery_policy.md#4",
+          "delivery_policy.md#1",
+          "delivery_policy.md#5",
+          "employee_handbook.md#5",
+          "refund_policy.md#1"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#4",
+          "delivery_policy.md#5"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": true,
+          "3\u20137 business days": true,
+          "7 calendar days": true,
+          "photographic evidence": true,
+          "Submit PTO": true,
+          "Ticket Categories": false,
+          "refund_request": false,
+          "VPN": true,
+          "OS patches": true
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.7351,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 2,
+            "role": "neighbor_previous",
+            "label": "delivery_policy.md#3",
+            "similarity": null,
+            "expanded_from": 4,
+            "text_len": 500,
+            "preview": "d shipping within the contiguous service area. Expedited and overnight upgrades remain chargeable.  Standard flat shipping for below-threshold orders is **$9.99**.  ## 5. Delivery "
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "delivery_policy.md#1",
+            "similarity": 0.6359,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "exception handling for delayed or overdue orders.  ## 2. Processing Times  - **In-stock items:** warehouse processing within **1\u20132 business days** after payment confirmation. - **B"
+          },
+          {
+            "n": 4,
+            "role": "neighbor_previous",
+            "label": "delivery_policy.md#0",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 500,
+            "preview": "# Delivery Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-DEL-002   **Effective Date:** March 1, 2025   **Last Updated:** October 15, 2026   **Owner:** "
+          },
+          {
+            "n": 5,
+            "role": "neighbor_next",
+            "label": "delivery_policy.md#2",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 400,
+            "preview": "t domestic | | Expedited | 2\u20133 business days | Priority business orders | | Overnight | Next business day | Urgent replacements | | Freight | Scheduled | Large furniture / bulk |  "
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "delivery_policy.md#5",
+            "similarity": 0.6183,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ed shipped or processing.  Support agents must:  1. Verify carrier tracking. 2. Contact the carrier within one business day. 3. Offer a replacement or refund if the package is conf"
+          },
+          {
+            "n": 7,
+            "role": "neighbor_next",
+            "label": "delivery_policy.md#6",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 320,
+            "preview": "rmation unless the customer opts out in writing. High-risk destinations may require freight appointment delivery.  ## 9. Damaged in Transit  Customers must report visible damage wi"
+          },
+          {
+            "n": 8,
+            "role": "retrieved",
+            "label": "employee_handbook.md#5",
+            "similarity": 0.6074,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "irmation or documented no-response after **5 business days**.  ## 7. Time Off  - Submit PTO requests at least **7 days** in advance when possible. - Emergency leave should be repor"
+          },
+          {
+            "n": 9,
+            "role": "neighbor_previous",
+            "label": "employee_handbook.md#4",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 500,
+            "preview": "rt suspected data leaks to IT Security within **1 hour**.  ## 6. Ticket Handling Expectations  Support agents should:  1. Acknowledge new tickets within **4 business hours**. 2. Se"
+          },
+          {
+            "n": 10,
+            "role": "neighbor_next",
+            "label": "employee_handbook.md#6",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 120,
+            "preview": "wledgment  All employees acknowledge that they have read this handbook during onboarding and after each major revision. "
+          },
+          {
+            "n": 11,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6056,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 12,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#0",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 500,
+            "preview": "# Refund Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-REF-001   **Effective Date:** January 1, 2025   **Last Updated:** November 1, 2026   **Owner:** "
+          },
+          {
+            "n": 13,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#2",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 400,
+            "preview": " | Notes | |---|---|---| | pending | Yes | Cancel and reverse authorization | | confirmed | Yes | Cancel before warehouse pick | | processing | Conditional | Allowed only before sh"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 3,
+            "rationale": "7 calendar days + replacement/refund correct, but compresses away verify/contact steps."
+          },
+          "completeness": {
+            "score": 2,
+            "rationale": "Loses steps 1\u20132 (verify tracking; contact carrier within one business day)."
+          },
+          "evidence_utilization": {
+            "score": 2,
+            "rationale": "Primary evidence still in context; larger context (~2\u00d7) coincides with truncated procedure."
+          },
+          "unsupported_claims": {
+            "score": 3,
+            "rationale": "Slightly overstates certainty ('must offer') without surrounding verification steps; still policy-rooted."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Keeps 7 calendar days; drops procedural preconditions."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "On-topic."
+          },
+          "source_consistency": {
+            "score": 3,
+            "rationale": "Consistent with delivery policy; ignores added neighbor noise in answer."
+          }
+        },
+        "total": 20,
+        "mean": 2.857142857142857
+      }
+    },
+    "Q3": {
+      "off": {
+        "answer": "According to the provided documents, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing.\n\nSupport agents must verify carrier tracking and contact the carrier to resolve the issue. If the delivery is late, it may be considered \"overdue\" and eligible for a refund, but this depends on the specific circumstances and the support agent's evaluation.\n\nHowever, the provided documents do not explicitly state the refund eligibility for late deliveries. The refund eligibility is conditional and depends on the specific policy section being referenced.",
+        "context_char_len": 4455,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "refund_policy.md#1",
+          "refund_policy.md#6",
+          "delivery_policy.md#4",
+          "refund_policy.md#3",
+          "customer_support_guidelines.md#5"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#4",
+          "refund_policy.md#3"
+        ],
+        "primary_missing_from_context": [
+          "delivery_policy.md#5"
+        ],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.663,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6377,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.63,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "refund_policy.md#3",
+            "similarity": 0.5975,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " (within window) | Subject to inspection | | cancelled | N/A | No further refund action | | returned | Yes | Credit after warehouse QC | | overdue | Conditional | Escalated to Oper"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#5",
+            "similarity": 0.5834,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "longs to the customer. 2. Check order status, shipment dates, and payment status. 3. Confirm line-item totals match the order subtotal. 4. Apply Refund Policy and Delivery Policy b"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 2,
+            "rationale": "Overdue definition OK; refund eligibility left vague; does not invent photo requirement for late delivery (good) but also misses 7-day lost rule (#5 absent)."
+          },
+          "completeness": {
+            "score": 1,
+            "rationale": "Missing primary #5 evidence and Conditional overdue refund row usage is weak."
+          },
+          "evidence_utilization": {
+            "score": 2,
+            "rationale": "Uses overdue definition from #4; underuses refund#3 Conditional row."
+          },
+          "unsupported_claims": {
+            "score": 3,
+            "rationale": "Avoids automatic-refund promise; some soft speculation ('may be eligible') without citing Conditional table clearly."
+          },
+          "conditions_exceptions": {
+            "score": 2,
+            "rationale": "Does not separate defective-photo rules vs late/lost rules explicitly enough."
+          },
+          "relevance": {
+            "score": 3,
+            "rationale": "Addresses late refund but hedges heavily."
+          },
+          "source_consistency": {
+            "score": 3,
+            "rationale": "Sources include refund#1 photo text; answer mostly avoids applying photo to late delivery."
+          }
+        },
+        "total": 16,
+        "mean": 2.2857142857142856
+      },
+      "on": {
+        "answer": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked as shipped or processing. However, the CONTEXT does not explicitly state that a refund is automatically granted for late deliveries.\n\nTo determine if you can get a refund for a late delivery, you would need to check the order status, shipment dates, and payment status, and confirm that the line-item totals match the order subtotal. Additionally, you would need to apply the Refund Policy and Delivery Policy before promising outcomes.\n\nIt appears that refunds for late deliveries are conditional and may be subject to further investigation. If you are experiencing a late delivery, I would recommend checking the order status and contacting NovaForge's customer support to discuss your options.",
+        "context_char_len": 9457,
+        "context_block_count": 14,
+        "neighbor_count": 9,
+        "sources": [
+          "refund_policy.md#1",
+          "refund_policy.md#6",
+          "delivery_policy.md#4",
+          "refund_policy.md#3",
+          "customer_support_guidelines.md#5"
+        ],
+        "primary_in_context": [
+          "delivery_policy.md#4",
+          "delivery_policy.md#5",
+          "refund_policy.md#3"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": true,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.663,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 2,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#0",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 500,
+            "preview": "# Refund Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-REF-001   **Effective Date:** January 1, 2025   **Last Updated:** November 1, 2026   **Owner:** "
+          },
+          {
+            "n": 3,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#2",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 400,
+            "preview": " | Notes | |---|---|---| | pending | Yes | Cancel and reverse authorization | | confirmed | Yes | Cancel before warehouse pick | | processing | Conditional | Allowed only before sh"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6377,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 5,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#5",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 500,
+            "preview": "ems marked \u201cfinal sale\u201d  ## 6. Partial Refunds  When an order contains multiple line items, refunds are calculated as:  `line_total + proportional tax \u2212 restocking fee (if applicab"
+          },
+          {
+            "n": 6,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#7",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 26,
+            "preview": " within one business day. "
+          },
+          {
+            "n": 7,
+            "role": "retrieved",
+            "label": "delivery_policy.md#4",
+            "similarity": 0.63,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "confirmation of delivery - **overdue:** expected delivery date passed with no delivery scan - **returned:** package returned to warehouse or customer-initiated return received - **"
+          },
+          {
+            "n": 8,
+            "role": "neighbor_previous",
+            "label": "delivery_policy.md#3",
+            "similarity": null,
+            "expanded_from": 4,
+            "text_len": 500,
+            "preview": "d shipping within the contiguous service area. Expedited and overnight upgrades remain chargeable.  Standard flat shipping for below-threshold orders is **$9.99**.  ## 5. Delivery "
+          },
+          {
+            "n": 9,
+            "role": "neighbor_next",
+            "label": "delivery_policy.md#5",
+            "similarity": null,
+            "expanded_from": 4,
+            "text_len": 400,
+            "preview": "within one business day. 3. Offer a replacement or refund if the package is confirmed lost after **7 calendar days**.  ## 7. Address Changes  Address changes are allowed only befor"
+          },
+          {
+            "n": 10,
+            "role": "retrieved",
+            "label": "refund_policy.md#3",
+            "similarity": 0.5975,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " (within window) | Subject to inspection | | cancelled | N/A | No further refund action | | returned | Yes | Credit after warehouse QC | | overdue | Conditional | Escalated to Oper"
+          },
+          {
+            "n": 11,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#4",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 400,
+            "preview": "d payments are allowed when only some line items are returned.  ## 5. Non-Refundable Items  - Custom-configured hardware built to customer specification - Opened consumables and se"
+          },
+          {
+            "n": 12,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#5",
+            "similarity": 0.5834,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "longs to the customer. 2. Check order status, shipment dates, and payment status. 3. Confirm line-item totals match the order subtotal. 4. Apply Refund Policy and Delivery Policy b"
+          },
+          {
+            "n": 13,
+            "role": "neighbor_previous",
+            "label": "customer_support_guidelines.md#4",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 500,
+            "preview": "** \u2014 agent actively working   3. **waiting_customer** \u2014 blocked on customer reply or documents   4. **resolved** \u2014 solution provided; awaiting confirmation window   5. **closed** \u2014"
+          },
+          {
+            "n": 14,
+            "role": "neighbor_next",
+            "label": "customer_support_guidelines.md#6",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 400,
+            "preview": ", partial refund) when full refunds are not allowed.  ## 8. Escalation Path  1. Support Agent   2. Senior Support / Queue Lead   3. Operations Manager (fulfillment & overdue)   4. "
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 2,
+            "rationale": "Correct that refund is not automatic; still fails to state available 7-calendar-day lost-package replacement/refund rule now in context."
+          },
+          "completeness": {
+            "score": 2,
+            "rationale": "Context now contains #5 and refund#3; answer omits clear 7-day rule and Conditional escalation specifics."
+          },
+          "evidence_utilization": {
+            "score": 1,
+            "rationale": "Critical neighbor #5 present with explicit 7-day sentence; model did not clearly communicate it."
+          },
+          "unsupported_claims": {
+            "score": 3,
+            "rationale": "No phone invent; process advice stays general; does not fabricate automatic refund."
+          },
+          "conditions_exceptions": {
+            "score": 2,
+            "rationale": "Mentions conditional nature but not the concrete lost-after-7-days condition."
+          },
+          "relevance": {
+            "score": 3,
+            "rationale": "On-topic; leans into support process over policy rule."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Attribution still original ranked hits; #5 correctly supporting-only in context."
+          }
+        },
+        "total": 17,
+        "mean": 2.4285714285714284
+      }
+    },
+    "Q4": {
+      "off": {
+        "answer": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible.",
+        "context_char_len": 4189,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "employee_handbook.md#5",
+          "employee_handbook.md#2",
+          "employee_handbook.md#4",
+          "employee_handbook.md#6",
+          "customer_support_guidelines.md#2"
+        ],
+        "primary_in_context": [
+          "employee_handbook.md#4",
+          "employee_handbook.md#5"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": false,
+          "Submit PTO": true,
+          "Ticket Categories": false,
+          "refund_request": false,
+          "VPN": true,
+          "OS patches": true
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "employee_handbook.md#5",
+            "similarity": 0.6456,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "irmation or documented no-response after **5 business days**.  ## 7. Time Off  - Submit PTO requests at least **7 days** in advance when possible. - Emergency leave should be repor"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "employee_handbook.md#2",
+            "similarity": 0.6279,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "aboration hours: **10:00\u201316:00** local office time, Monday\u2013Friday. - Support agents on rotating shifts cover **08:00\u201320:00**. - Overtime for fulfillment peaks must be pre-approved "
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "employee_handbook.md#4",
+            "similarity": 0.5993,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "rt suspected data leaks to IT Security within **1 hour**.  ## 6. Ticket Handling Expectations  Support agents should:  1. Acknowledge new tickets within **4 business hours**. 2. Se"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "employee_handbook.md#6",
+            "similarity": 0.5739,
+            "expanded_from": null,
+            "text_len": 220,
+            "preview": "e VPN for production systems and keep OS patches current within **14 days** of release.  ## 9. Acknowledgment  All employees acknowledge that they have read this handbook during on"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#2",
+            "similarity": 0.5572,
+            "expanded_from": null,
+            "text_len": 499,
+            "preview": "dvice, policy questions | low |  Promote a ticket to **urgent** when the customer faces business downtime, a security concern, or a dispute above **$2,500**.  ## 3. Priority SLA Ta"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "PTO \u22657 days ahead matches handbook#5."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "Answers notice period; omits emergency/coverage bullets (not strictly required by question)."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses #5."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "No invented entitlements; VPN in context not echoed."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "'when possible' retained."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Exact question match."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Aligned with handbook sources."
+          }
+        },
+        "total": 26,
+        "mean": 3.7142857142857144
+      },
+      "on": {
+        "answer": "According to CONTEXT [1] and [6], the employee PTO notice period is at least **7 days** in advance when possible.",
+        "context_char_len": 6521,
+        "context_block_count": 9,
+        "neighbor_count": 4,
+        "sources": [
+          "employee_handbook.md#5",
+          "employee_handbook.md#2",
+          "employee_handbook.md#4",
+          "employee_handbook.md#6",
+          "customer_support_guidelines.md#2"
+        ],
+        "primary_in_context": [
+          "employee_handbook.md#4",
+          "employee_handbook.md#5"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": false,
+          "Submit PTO": true,
+          "Ticket Categories": true,
+          "refund_request": true,
+          "VPN": true,
+          "OS patches": true
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "employee_handbook.md#5",
+            "similarity": 0.6456,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "irmation or documented no-response after **5 business days**.  ## 7. Time Off  - Submit PTO requests at least **7 days** in advance when possible. - Emergency leave should be repor"
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "employee_handbook.md#2",
+            "similarity": 0.6279,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "aboration hours: **10:00\u201316:00** local office time, Monday\u2013Friday. - Support agents on rotating shifts cover **08:00\u201320:00**. - Overtime for fulfillment peaks must be pre-approved "
+          },
+          {
+            "n": 3,
+            "role": "neighbor_previous",
+            "label": "employee_handbook.md#1",
+            "similarity": null,
+            "expanded_from": 2,
+            "text_len": 500,
+            "preview": "ry system roles:  1. **Admin** \u2014 system configuration, user provisioning, and security oversight. 2. **Support Agent** \u2014 customer ticket handling, refund triage, and order lookups."
+          },
+          {
+            "n": 4,
+            "role": "neighbor_next",
+            "label": "employee_handbook.md#3",
+            "similarity": null,
+            "expanded_from": 2,
+            "text_len": 400,
+            "preview": "may result in coaching, written warning, or termination depending on severity.  ## 5. Customer Data Handling  - Access customer records only when required for an assigned ticket or"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "employee_handbook.md#4",
+            "similarity": 0.5993,
+            "expanded_from": null,
+            "text_len": 400,
+            "preview": "rt agents should:  1. Acknowledge new tickets within **4 business hours**. 2. Set priority accurately (`low`, `medium`, `high`, `urgent`). 3. Escalate urgent billing or security is"
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "employee_handbook.md#6",
+            "similarity": 0.5739,
+            "expanded_from": null,
+            "text_len": 220,
+            "preview": "e VPN for production systems and keep OS patches current within **14 days** of release.  ## 9. Acknowledgment  All employees acknowledge that they have read this handbook during on"
+          },
+          {
+            "n": 7,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#2",
+            "similarity": 0.5572,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "dvice, policy questions | low |  Promote a ticket to **urgent** when the customer faces business downtime, a security concern, or a dispute above **$2,500**.  ## 3. Priority SLA Ta"
+          },
+          {
+            "n": 8,
+            "role": "neighbor_previous",
+            "label": "customer_support_guidelines.md#1",
+            "similarity": null,
+            "expanded_from": 2,
+            "text_len": 500,
+            "preview": "ata.  ## 2. Ticket Categories  | Category | Typical Issues | Default Priority | |---|---|---| | billing | invoice disputes, double charges | medium | | shipping | delays, wrong add"
+          },
+          {
+            "n": 9,
+            "role": "neighbor_next",
+            "label": "customer_support_guidelines.md#3",
+            "similarity": null,
+            "expanded_from": 2,
+            "text_len": 399,
+            "preview": "customer reference - Clear subject line - Detailed description - Status and priority - Category - Optional linked order number when the issue is order-related - Assigned support ag"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "Same correct 7-day notice."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "Same scope."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses PTO evidence amid extra neighbors."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "VPN still not in answer."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Preserves 'when possible'."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "On-topic despite larger context."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Stable."
+          }
+        },
+        "total": 26,
+        "mean": 3.7142857142857144
+      }
+    },
+    "Q5": {
+      "off": {
+        "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and assigned support agent.",
+        "context_char_len": 4482,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "customer_support_guidelines.md#0",
+          "refund_policy.md#6",
+          "customer_support_guidelines.md#5",
+          "customer_support_guidelines.md#3",
+          "privacy_policy.md#3"
+        ],
+        "primary_in_context": [
+          "customer_support_guidelines.md#0"
+        ],
+        "primary_missing_from_context": [
+          "customer_support_guidelines.md#1"
+        ],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": false,
+          "Submit PTO": false,
+          "Ticket Categories": true,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#0",
+            "similarity": 0.6673,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Customer Support Guidelines  **Company:** NovaForge Enterprise Solutions   **Document ID:** SUP-GDL-005   **Effective Date:** April 1, 2025   **Last Updated:** November 5, 2026  "
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.642,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#5",
+            "similarity": 0.6411,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "longs to the customer. 2. Check order status, shipment dates, and payment status. 3. Confirm line-item totals match the order subtotal. 4. Apply Refund Policy and Delivery Policy b"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#3",
+            "similarity": 0.575,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "30 minutes | Same business day |  ## 4. Required Ticket Fields  Every ticket must include:  - Valid customer reference - Clear subject line - Detailed description - Status and prio"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "privacy_policy.md#3",
+            "similarity": 0.5737,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "er support 4. Detect fraud and secure accounts 5. Improve product catalog and operations 6. Meet legal and audit obligations  ## 4. Legal Bases  Depending on jurisdiction, processi"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 3,
+            "rationale": "Ticket process correct; categories incomplete; no phone invent."
+          },
+          "completeness": {
+            "score": 2,
+            "rationale": "Missing full category table (#1 not in context)."
+          },
+          "evidence_utilization": {
+            "score": 2,
+            "rationale": "Uses #0 partially; cannot use #1."
+          },
+          "unsupported_claims": {
+            "score": 3,
+            "rationale": "Mentions required fields (subject, agent) that may over-specify vs truncated #0; no phone/email."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "N/A mostly; no false public contact channels."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Contact path via tickets."
+          },
+          "source_consistency": {
+            "score": 3,
+            "rationale": "Consistent with support guidelines + refund ticket path."
+          }
+        },
+        "total": 20,
+        "mean": 2.857142857142857
+      },
+      "on": {
+        "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The supported categories are:\n\n- billing\n- shipping\n- product_defect\n- refund_request\n- account\n- general_inquiry\n\nYou can find the specific category for your issue by referring to the table in the CONTEXT:\n\n| Category | Typical Issues | Default Priority |\n|---|---|---|\n| billing | invoice disputes, double charges | medium |\n| shipping | delays, wrong address, tracking | medium |\n| product_defect | DOA, failure under warranty | high |\n| refund_request | return/refund eligibility | medium |\n| account | login, profile, company admin | medium |\n| general_inquiry | product advice, policy questions | low |\n\nOnce you've selected the correct category, you can submit a support ticket and follow the instructions provided in the CONTEXT to escalate your issue to the appropriate level of support.",
+        "context_char_len": 8962,
+        "context_block_count": 13,
+        "neighbor_count": 8,
+        "sources": [
+          "customer_support_guidelines.md#0",
+          "refund_policy.md#6",
+          "customer_support_guidelines.md#5",
+          "customer_support_guidelines.md#3",
+          "privacy_policy.md#3"
+        ],
+        "primary_in_context": [
+          "customer_support_guidelines.md#0",
+          "customer_support_guidelines.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": false,
+          "Submit PTO": false,
+          "Ticket Categories": true,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#0",
+            "similarity": 0.6673,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Customer Support Guidelines  **Company:** NovaForge Enterprise Solutions   **Document ID:** SUP-GDL-005   **Effective Date:** April 1, 2025   **Last Updated:** November 5, 2026  "
+          },
+          {
+            "n": 2,
+            "role": "neighbor_next",
+            "label": "customer_support_guidelines.md#1",
+            "similarity": null,
+            "expanded_from": 0,
+            "text_len": 400,
+            "preview": "ing | invoice disputes, double charges | medium | | shipping | delays, wrong address, tracking | medium | | product_defect | DOA, failure under warranty | high | | refund_request |"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.642,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 4,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#5",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 500,
+            "preview": "ems marked \u201cfinal sale\u201d  ## 6. Partial Refunds  When an order contains multiple line items, refunds are calculated as:  `line_total + proportional tax \u2212 restocking fee (if applicab"
+          },
+          {
+            "n": 5,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#7",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 26,
+            "preview": " within one business day. "
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#5",
+            "similarity": 0.6411,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "longs to the customer. 2. Check order status, shipment dates, and payment status. 3. Confirm line-item totals match the order subtotal. 4. Apply Refund Policy and Delivery Policy b"
+          },
+          {
+            "n": 7,
+            "role": "neighbor_previous",
+            "label": "customer_support_guidelines.md#4",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 500,
+            "preview": "** \u2014 agent actively working   3. **waiting_customer** \u2014 blocked on customer reply or documents   4. **resolved** \u2014 solution provided; awaiting confirmation window   5. **closed** \u2014"
+          },
+          {
+            "n": 8,
+            "role": "neighbor_next",
+            "label": "customer_support_guidelines.md#6",
+            "similarity": null,
+            "expanded_from": 5,
+            "text_len": 400,
+            "preview": ", partial refund) when full refunds are not allowed.  ## 8. Escalation Path  1. Support Agent   2. Senior Support / Queue Lead   3. Operations Manager (fulfillment & overdue)   4. "
+          },
+          {
+            "n": 9,
+            "role": "retrieved",
+            "label": "customer_support_guidelines.md#3",
+            "similarity": 0.575,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "30 minutes | Same business day |  ## 4. Required Ticket Fields  Every ticket must include:  - Valid customer reference - Clear subject line - Detailed description - Status and prio"
+          },
+          {
+            "n": 10,
+            "role": "neighbor_previous",
+            "label": "customer_support_guidelines.md#2",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 500,
+            "preview": "dvice, policy questions | low |  Promote a ticket to **urgent** when the customer faces business downtime, a security concern, or a dispute above **$2,500**.  ## 3. Priority SLA Ta"
+          },
+          {
+            "n": 11,
+            "role": "retrieved",
+            "label": "privacy_policy.md#3",
+            "similarity": 0.5737,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "er support 4. Detect fraud and secure accounts 5. Improve product catalog and operations 6. Meet legal and audit obligations  ## 4. Legal Bases  Depending on jurisdiction, processi"
+          },
+          {
+            "n": 12,
+            "role": "neighbor_previous",
+            "label": "privacy_policy.md#2",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 500,
+            "preview": "icket content, attachments, and correspondence - Agent assignment history - Priority and resolution metadata  ### 2.4 Technical Data - IP address, browser type, and device identifi"
+          },
+          {
+            "n": 13,
+            "role": "neighbor_next",
+            "label": "privacy_policy.md#4",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 400,
+            "preview": "gulators when legally required  We do **not** sell personal data.  ## 6. Retention  | Data Type | Retention Period | |---|---| | Customer profile | Active relationship + 7 years | "
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "Categories match guidelines table including refund_request."
+          },
+          "completeness": {
+            "score": 4,
+            "rationale": "Full category list/table from neighbor #1."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Clearly uses expanded ticket-category content."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "No phone/email URL invent."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Priority notes present in table context; answer focuses on categories."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Directly answers how to contact via documented path."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Sources unchanged; neighbor #1 supporting."
+          }
+        },
+        "total": 27,
+        "mean": 3.857142857142857
+      }
+    },
+    "Q6": {
+      "off": {
+        "answer": "According to CONTEXT [3], photographic evidence or a support ticket is required to support a refund for defective products.",
+        "context_char_len": 4455,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "refund_policy.md#2",
+          "refund_policy.md#6",
+          "refund_policy.md#1",
+          "product_documentation.md#3",
+          "product_documentation.md#6"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#2",
+            "similarity": 0.6357,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "tographic evidence or a support ticket.  ## 3. Order Status Rules  | Order Status | Refund Eligible? | Notes | |---|---|---| | pending | Yes | Cancel and reverse authorization | | "
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6345,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6154,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "product_documentation.md#3",
+            "similarity": 0.6126,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " standard warranty. Optional 3-year extended warranty available as an accessory SKU.  ### Monitors Includes docking-compatible displays. Panel pixel defects follow ISO 9241-307 Cla"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "product_documentation.md#6",
+            "similarity": 0.6033,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " | Limited lifetime / 36 months | Model dependent | | Storage | 36 months | Selected SKUs | | Furniture | 24 months structural | No | | Software | Term of license | N/A |  ## 6. Re"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "Photographic evidence or support ticket for defective \u2014 matches refund#1."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "Core evidence stated; optional delivery 48h damage path not required."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses #1."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "None material."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Scoped to defective refund support."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Exact."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Good."
+          }
+        },
+        "total": 26,
+        "mean": 3.7142857142857144
+      },
+      "on": {
+        "answer": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket\n\nAdditionally, it is mentioned that \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\"",
+        "context_char_len": 8587,
+        "context_block_count": 13,
+        "neighbor_count": 8,
+        "sources": [
+          "refund_policy.md#2",
+          "refund_policy.md#6",
+          "refund_policy.md#1",
+          "product_documentation.md#3",
+          "product_documentation.md#6"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#2",
+            "similarity": 0.6357,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "tographic evidence or a support ticket.  ## 3. Order Status Rules  | Order Status | Refund Eligible? | Notes | |---|---|---| | pending | Yes | Cancel and reverse authorization | | "
+          },
+          {
+            "n": 2,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#3",
+            "similarity": null,
+            "expanded_from": 2,
+            "text_len": 400,
+            "preview": " | Yes | Credit after warehouse QC | | overdue | Conditional | Escalated to Operations Manager |  ## 4. Refund Methods  1. Original payment method is preferred for completed paymen"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6345,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 4,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#5",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 500,
+            "preview": "ems marked \u201cfinal sale\u201d  ## 6. Partial Refunds  When an order contains multiple line items, refunds are calculated as:  `line_total + proportional tax \u2212 restocking fee (if applicab"
+          },
+          {
+            "n": 5,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#7",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 26,
+            "preview": " within one business day. "
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6154,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 7,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#0",
+            "similarity": null,
+            "expanded_from": 1,
+            "text_len": 500,
+            "preview": "# Refund Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-REF-001   **Effective Date:** January 1, 2025   **Last Updated:** November 1, 2026   **Owner:** "
+          },
+          {
+            "n": 8,
+            "role": "retrieved",
+            "label": "product_documentation.md#3",
+            "similarity": 0.6126,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " standard warranty. Optional 3-year extended warranty available as an accessory SKU.  ### Monitors Includes docking-compatible displays. Panel pixel defects follow ISO 9241-307 Cla"
+          },
+          {
+            "n": 9,
+            "role": "neighbor_previous",
+            "label": "product_documentation.md#2",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 500,
+            "preview": "d through the storefront.  ## 3. Stock Management  - `stock_quantity` reflects sellable warehouse units. - When stock reaches **10 units**, Procurement receives an automatic reorde"
+          },
+          {
+            "n": 10,
+            "role": "neighbor_next",
+            "label": "product_documentation.md#4",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 400,
+            "preview": "Storage SSDs, NAS devices, and backup appliances. Capacity figures use decimal (SI) gigabyte notation unless otherwise labeled.  ### Software Licenses Seat-based and floating licen"
+          },
+          {
+            "n": 11,
+            "role": "retrieved",
+            "label": "product_documentation.md#6",
+            "similarity": 0.6033,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " | Limited lifetime / 36 months | Model dependent | | Storage | 36 months | Selected SKUs | | Furniture | 24 months structural | No | | Software | Term of license | N/A |  ## 6. Re"
+          },
+          {
+            "n": 12,
+            "role": "neighbor_previous",
+            "label": "product_documentation.md#5",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 500,
+            "preview": "nd storage cabinets. Freight delivery appointments are mandatory for packages over **70 lb**.  ### Accessories Cables, adapters, mounts, and spare batteries. Compatibility matrices"
+          },
+          {
+            "n": 13,
+            "role": "neighbor_next",
+            "label": "product_documentation.md#7",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 77,
+            "preview": " description and reproduction steps - Photos or diagnostic logs when relevant"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "Same core evidence correct."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "Adds restocking-fee note (related but secondary)."
+          },
+          "evidence_utilization": {
+            "score": 3,
+            "rationale": "Uses #1; also pulls adjacent restocking text from neighbors."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "Restocking claim is in context."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "OK."
+          },
+          "relevance": {
+            "score": 3,
+            "rationale": "Slightly broader than asked but still evidence-related."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "OK."
+          }
+        },
+        "total": 24,
+        "mean": 3.4285714285714284
+      }
+    },
+    "Q7": {
+      "off": {
+        "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n4. Refunds are processed according to the following rules:\n\t* Original payment method is preferred for completed payments.\n\t* Bank transfers may take 5-10 business days.\n\t* Card refunds typically appear in 3-5 business days.\n\t* Invoice / net-30 accounts receive a credit memo applied to the next billing cycle.\n\t* Partial refunds are calculated as `line_total + proportional tax \u2212 restocking fee (if applicable)`.\n\t* Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n\nNote that the refund process may vary depending on the type of product (standard physical product, software license, digital product, defective/incorrect item) and the order status (e.g., \"cancelled\", \"returned\", \"overdue\").",
+        "context_char_len": 4439,
+        "context_block_count": 5,
+        "neighbor_count": 0,
+        "sources": [
+          "refund_policy.md#0",
+          "refund_policy.md#3",
+          "refund_policy.md#1",
+          "refund_policy.md#6",
+          "refund_policy.md#5"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#6"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#0",
+            "similarity": 0.6876,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Refund Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-REF-001   **Effective Date:** January 1, 2025   **Last Updated:** November 1, 2026   **Owner:** "
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "refund_policy.md#3",
+            "similarity": 0.6868,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " (within window) | Subject to inspection | | cancelled | N/A | No further refund action | | returned | Yes | Credit after warehouse QC | | overdue | Conditional | Escalated to Oper"
+          },
+          {
+            "n": 3,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6838,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 4,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6805,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "refund_policy.md#5",
+            "similarity": 0.6509,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ems marked \u201cfinal sale\u201d  ## 6. Partial Refunds  When an order contains multiple line items, refunds are calculated as:  `line_total + proportional tax \u2212 restocking fee (if applicab"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 4,
+            "rationale": "refund_request ticket, wait, RMA \u2014 matches #6; timing notes from nearby refund chunks."
+          },
+          "completeness": {
+            "score": 4,
+            "rationale": "Full request process covered."
+          },
+          "evidence_utilization": {
+            "score": 4,
+            "rationale": "Uses #6 plus methods from co-retrieved chunks."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "Grounded."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Includes timing channels; escalation not emphasized."
+          },
+          "relevance": {
+            "score": 4,
+            "rationale": "Process-focused."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "All refund_policy sources."
+          }
+        },
+        "total": 27,
+        "mean": 3.857142857142857
+      },
+      "on": {
+        "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n4. Refunds are processed based on the order status and product type:\n\t* Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date.\n\t* Software licenses and digital products: refund requests must be submitted within **14 calendar days** of purchase, and only if the license has not been activated.\n\t* Defective or incorrect items: may be refunded or replaced outside the standard window when supported by photographic evidence or a support ticket.\n5. Refunds are calculated as `line_total + proportional tax \u2212 restocking fee (if applicable)`.\n6. Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n7. A restocking fee of **15%** may apply to opened but unused products returned without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.\n\nNote that urgent refund disputes above **$2,500** must be escalated to an Operations Manager within one business day.",
+        "context_char_len": 5810,
+        "context_block_count": 8,
+        "neighbor_count": 3,
+        "sources": [
+          "refund_policy.md#0",
+          "refund_policy.md#3",
+          "refund_policy.md#1",
+          "refund_policy.md#6",
+          "refund_policy.md#5"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#6"
+        ],
+        "primary_missing_from_context": [],
+        "key_phrase_in_context": {
+          "Standard Ground": false,
+          "3\u20137 business days": false,
+          "7 calendar days": false,
+          "photographic evidence": true,
+          "Submit PTO": false,
+          "Ticket Categories": false,
+          "refund_request": true,
+          "VPN": false,
+          "OS patches": false
+        },
+        "context_blocks": [
+          {
+            "n": 1,
+            "role": "retrieved",
+            "label": "refund_policy.md#0",
+            "similarity": 0.6876,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "# Refund Policy  **Company:** NovaForge Enterprise Solutions   **Document ID:** POL-REF-001   **Effective Date:** January 1, 2025   **Last Updated:** November 1, 2026   **Owner:** "
+          },
+          {
+            "n": 2,
+            "role": "retrieved",
+            "label": "refund_policy.md#3",
+            "similarity": 0.6868,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": " (within window) | Subject to inspection | | cancelled | N/A | No further refund action | | returned | Yes | Credit after warehouse QC | | overdue | Conditional | Escalated to Oper"
+          },
+          {
+            "n": 3,
+            "role": "neighbor_previous",
+            "label": "refund_policy.md#2",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 500,
+            "preview": "tographic evidence or a support ticket.  ## 3. Order Status Rules  | Order Status | Refund Eligible? | Notes | |---|---|---| | pending | Yes | Cancel and reverse authorization | | "
+          },
+          {
+            "n": 4,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#4",
+            "similarity": null,
+            "expanded_from": 3,
+            "text_len": 400,
+            "preview": "d payments are allowed when only some line items are returned.  ## 5. Non-Refundable Items  - Custom-configured hardware built to customer specification - Opened consumables and se"
+          },
+          {
+            "n": 5,
+            "role": "retrieved",
+            "label": "refund_policy.md#1",
+            "similarity": 0.6838,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ity Window  - Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date. - Software licenses and digital products: refund reque"
+          },
+          {
+            "n": 6,
+            "role": "retrieved",
+            "label": "refund_policy.md#6",
+            "similarity": 0.6805,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "thout defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.  ## 8. How to Request a Refund  1. Open a support ticket with category `refund_request"
+          },
+          {
+            "n": 7,
+            "role": "neighbor_next",
+            "label": "refund_policy.md#7",
+            "similarity": null,
+            "expanded_from": 6,
+            "text_len": 26,
+            "preview": " within one business day. "
+          },
+          {
+            "n": 8,
+            "role": "retrieved",
+            "label": "refund_policy.md#5",
+            "similarity": 0.6509,
+            "expanded_from": null,
+            "text_len": 500,
+            "preview": "ems marked \u201cfinal sale\u201d  ## 6. Partial Refunds  When an order contains multiple line items, refunds are calculated as:  `line_total + proportional tax \u2212 restocking fee (if applicab"
+          }
+        ],
+        "scores": {
+          "correctness": {
+            "score": 3,
+            "rationale": "Process correct; mixes eligibility windows/photo/restocking into 'process' answer."
+          },
+          "completeness": {
+            "score": 3,
+            "rationale": "More eligibility detail; core steps still present; can obscure pure process."
+          },
+          "evidence_utilization": {
+            "score": 3,
+            "rationale": "Uses neighbors/eligibility heavily."
+          },
+          "unsupported_claims": {
+            "score": 4,
+            "rationale": "Claims present in expanded/retrieved refund text."
+          },
+          "conditions_exceptions": {
+            "score": 3,
+            "rationale": "Many conditions listed; risk of conflating process with eligibility."
+          },
+          "relevance": {
+            "score": 3,
+            "rationale": "Somewhat broader than strict process question."
+          },
+          "source_consistency": {
+            "score": 4,
+            "rationale": "Still refund-policy grounded."
+          }
+        },
+        "total": 23,
+        "mean": 3.2857142857142856
+      }
+    }
+  },
+  "aggregate": {
+    "per_metric_mean": {
+      "off": {
+        "correctness": 3.5714285714285716,
+        "completeness": 2.857142857142857,
+        "evidence_utilization": 3.4285714285714284,
+        "unsupported_claims": 3.7142857142857144,
+        "conditions_exceptions": 3.0,
+        "relevance": 3.857142857142857,
+        "source_consistency": 3.5714285714285716
+      },
+      "on": {
+        "correctness": 3.2857142857142856,
+        "completeness": 2.7142857142857144,
+        "evidence_utilization": 2.7142857142857144,
+        "unsupported_claims": 3.5714285714285716,
+        "conditions_exceptions": 2.7142857142857144,
+        "relevance": 3.5714285714285716,
+        "source_consistency": 3.857142857142857
+      }
+    },
+    "mean_total_0_to_28": {
+      "off": 24.0,
+      "on": 22.428571428571427
+    },
+    "per_query_totals": {
+      "Q1": {
+        "off": 26,
+        "on": 20,
+        "delta_on_minus_off": -6
+      },
+      "Q2": {
+        "off": 27,
+        "on": 20,
+        "delta_on_minus_off": -7
+      },
+      "Q3": {
+        "off": 16,
+        "on": 17,
+        "delta_on_minus_off": 1
+      },
+      "Q4": {
+        "off": 26,
+        "on": 26,
+        "delta_on_minus_off": 0
+      },
+      "Q5": {
+        "off": 20,
+        "on": 27,
+        "delta_on_minus_off": 7
+      },
+      "Q6": {
+        "off": 26,
+        "on": 24,
+        "delta_on_minus_off": -2
+      },
+      "Q7": {
+        "off": 27,
+        "on": 23,
+        "delta_on_minus_off": -4
+      }
+    }
+  }
+}

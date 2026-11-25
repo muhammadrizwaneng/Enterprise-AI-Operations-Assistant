@@ -1,0 +1,2557 @@
+{
+  "meta": {
+    "method": "Checklist-assisted scoring aligned with Step 3 rubric; not LLM-as-judge",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "configs": [
+      "OFF",
+      "BLIND",
+      "A_TABLE",
+      "C_EVIDENCE",
+      "HYBRID_CAP2",
+      "HYBRID_CAP3"
+    ],
+    "rubric": "seven metrics 0-4; unsupported_claims higher=fewer"
+  },
+  "per_run": {
+    "Q1": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "methods=False only_sg=True processing=True cutoff=True; primary_missing=['delivery_policy.md#2']",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for NovaForge's shipping methods is as follows:\n\n- **Standard Ground**: 3\u20137 business days (Use Case: Default)\n- **In-stock items**: Warehouse processing within 1\u20132 business days af"
+          },
+          {
+            "seed": 202,
+            "total": 17,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "methods=False only_sg=True processing=False cutoff=False; primary_missing=['delivery_policy.md#2']",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. However, the exact delivery time may vary depending on the shipping method and the specific order."
+          },
+          {
+            "seed": 303,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "methods=False only_sg=True processing=True cutoff=True; primary_missing=['delivery_policy.md#2']",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for NovaForge's shipping methods is:\n\n* Standard Ground: 3\u20137 business days\n* In-stock items: warehouse processing within 1\u20132 business days after payment confirmation.\n* Back-ordere"
+          }
+        ],
+        "mean_total": 19.666666666666668,
+        "min_total": 17,
+        "max_total": 21,
+        "neighbor_count": 0,
+        "context_char_len": 4369,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to CONTEXT [3], Standard flat shipping for below-threshold orders is **$9.99**, and the typical transit time for Standard Ground shipping is 3\u20137 business days. Expedited shipping has a typical transit time of 2\u20133 business days, an"
+          },
+          {
+            "seed": 202,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for different shipping methods is as follows:\n\n- Standard Ground: 3\u20137 business days\n- Expedited: 2\u20133 business days\n- Overnight: Next business day\n- Freight: Scheduled (no specific "
+          },
+          {
+            "seed": 303,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping typically takes 2-3 business days, and Overnight shipping takes 1 business day."
+          }
+        ],
+        "mean_total": 22.333333333333332,
+        "min_total": 21,
+        "max_total": 25,
+        "neighbor_count": 3,
+        "context_char_len": 5571,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit times for NovaForge's shipping methods are:\n\n* Standard Ground: 3\u20137 business days\n* Expedited: 2\u20133 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit"
+          },
+          {
+            "seed": 202,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, while Overnight shipping takes 1 business day. Freight shipping is scheduled and does"
+          },
+          {
+            "seed": 303,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n- Standard Ground: 3\u20137 business days\n- Expedited: 2\u20133 business days\n- Overnight: Next business day\n- Freight: Scheduled (no specific transit ti"
+          }
+        ],
+        "mean_total": 23.666666666666668,
+        "min_total": 21,
+        "max_total": 25,
+        "neighbor_count": 1,
+        "context_char_len": 4918,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit times for NovaForge's shipping methods are:\n\n* Standard Ground: 3\u20137 business days\n* Expedited: 2\u20133 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit"
+          },
+          {
+            "seed": 202,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, while Overnight shipping takes 1 business day. Freight shipping is scheduled and does"
+          },
+          {
+            "seed": 303,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n- Standard Ground: 3\u20137 business days\n- Expedited: 2\u20133 business days\n- Overnight: Next business day\n- Freight: Scheduled (no specific transit ti"
+          }
+        ],
+        "mean_total": 23.666666666666668,
+        "min_total": 21,
+        "max_total": 25,
+        "neighbor_count": 1,
+        "context_char_len": 4918,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit times for NovaForge's shipping methods are:\n\n* Standard Ground: 3\u20137 business days\n* Expedited: 2\u20133 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit"
+          },
+          {
+            "seed": 202,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, while Overnight shipping takes 1 business day. Freight shipping is scheduled and does"
+          },
+          {
+            "seed": 303,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n- Standard Ground: 3\u20137 business days\n- Expedited: 2\u20133 business days\n- Overnight: Next business day\n- Freight: Scheduled (no specific transit ti"
+          }
+        ],
+        "mean_total": 23.666666666666668,
+        "min_total": 21,
+        "max_total": 25,
+        "neighbor_count": 1,
+        "context_char_len": 4918,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit times for NovaForge's shipping methods are:\n\n* Standard Ground: 3\u20137 business days\n* Expedited: 2\u20133 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit"
+          },
+          {
+            "seed": 202,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=False; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, while Overnight shipping takes 1 business day. Freight shipping is scheduled and does"
+          },
+          {
+            "seed": 303,
+            "total": 25,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "methods=True only_sg=False processing=False cutoff=True; primary_missing=[]",
+            "answer_preview": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n- Standard Ground: 3\u20137 business days\n- Expedited: 2\u20133 business days\n- Overnight: Next business day\n- Freight: Scheduled (no specific transit ti"
+          }
+        ],
+        "mean_total": 23.666666666666668,
+        "min_total": 21,
+        "max_total": 25,
+        "neighbor_count": 1,
+        "context_char_len": 4918,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q2": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to CONTEXT [3], if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 202,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "steps=3 seven=True collapsed=False",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund."
+          },
+          {
+            "seed": 303,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          }
+        ],
+        "mean_total": 22.666666666666668,
+        "min_total": 20,
+        "max_total": 28,
+        "neighbor_count": 0,
+        "context_char_len": 4449,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "If a package is overdue by 7 calendar days, support agents must offer a replacement or refund if the package is confirmed lost."
+          },
+          {
+            "seed": 202,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "If a package is overdue by 7 calendar days, the support agent must offer a replacement or refund if the package is confirmed lost."
+          },
+          {
+            "seed": 303,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "If a package is overdue by 7 calendar days, support agents must offer a replacement or refund to the customer."
+          }
+        ],
+        "mean_total": 20.0,
+        "min_total": 20,
+        "max_total": 20,
+        "neighbor_count": 8,
+        "context_char_len": 8901,
+        "irrelevant_neighbor_count": 8,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to CONTEXT [1], if a package is overdue by 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 202,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "steps=3 seven=True collapsed=False",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund."
+          }
+        ],
+        "mean_total": 22.666666666666668,
+        "min_total": 20,
+        "max_total": 28,
+        "neighbor_count": 1,
+        "context_char_len": 4998,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to CONTEXT [1], if a package is overdue by 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 202,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "steps=3 seven=True collapsed=False",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund."
+          }
+        ],
+        "mean_total": 22.666666666666668,
+        "min_total": 20,
+        "max_total": 28,
+        "neighbor_count": 1,
+        "context_char_len": 4998,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to CONTEXT [1], if a package is overdue by 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 202,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "steps=3 seven=True collapsed=False",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund."
+          }
+        ],
+        "mean_total": 22.666666666666668,
+        "min_total": 20,
+        "max_total": 28,
+        "neighbor_count": 1,
+        "context_char_len": 4998,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to CONTEXT [1], if a package is overdue by 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 202,
+            "total": 20,
+            "scores": {
+              "correctness": 3,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 3
+            },
+            "note": "steps=1 seven=True collapsed=True",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "steps=3 seven=True collapsed=False",
+            "answer_preview": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund."
+          }
+        ],
+        "mean_total": 22.666666666666668,
+        "min_total": 20,
+        "max_total": 28,
+        "neighbor_count": 1,
+        "context_char_len": 4998,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q3": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=False has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists. However, the exact refund eligibility for late deliveries is not explicitly stated. It is mention"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=True has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists. However, the CONTEXT does not explicitly state that a refund is automatically granted for overdue"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=True has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. However, the CONTEXT does not explicitly sta"
+          }
+        ],
+        "mean_total": 19.0,
+        "min_total": 18,
+        "max_total": 21,
+        "neighbor_count": 0,
+        "context_char_len": 4455,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. However, the CONTEXT does not explicitly sta"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verif"
+          },
+          {
+            "seed": 303,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=False has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verif"
+          }
+        ],
+        "mean_total": 20.666666666666668,
+        "min_total": 18,
+        "max_total": 23,
+        "neighbor_count": 9,
+        "context_char_len": 9457,
+        "irrelevant_neighbor_count": 8,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=True has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verif"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=True has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. However, the exact refund eligibility for la"
+          },
+          {
+            "seed": 303,
+            "total": 21,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=False auto_refund_wrong=False has_#5=False",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists. However, the exact refund eligibility for late deliveries is not explicitly stated.\n\nIt is mentio"
+          }
+        ],
+        "mean_total": 19.0,
+        "min_total": 18,
+        "max_total": 21,
+        "neighbor_count": 1,
+        "context_char_len": 5002,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verif"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. In this case, support agents must verify car"
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=False has_#5=True",
+            "answer_preview": "According to the provided documents, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. In this case, support agents must verify c"
+          }
+        ],
+        "mean_total": 24.666666666666668,
+        "min_total": 23,
+        "max_total": 28,
+        "neighbor_count": 4,
+        "context_char_len": 6375,
+        "irrelevant_neighbor_count": 3,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verif"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. In this case, support agents must verify car"
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=False has_#5=True",
+            "answer_preview": "According to the provided documents, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. \n\nSupport agents must verify carrier track"
+          }
+        ],
+        "mean_total": 24.666666666666668,
+        "min_total": 23,
+        "max_total": 28,
+        "neighbor_count": 2,
+        "context_char_len": 5655,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes **overdue** when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. In this case, support agents must verify c"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 2,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=True has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked shipped or processing. In this case, support agents must verify car"
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "overdue_def=True seven_rule=True auto_refund_wrong=False has_#5=True",
+            "answer_preview": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists. If the package is confirmed lost after 7 calendar days, a replacement or refund may be offered. H"
+          }
+        ],
+        "mean_total": 24.666666666666668,
+        "min_total": 23,
+        "max_total": 28,
+        "neighbor_count": 3,
+        "context_char_len": 5828,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q4": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT [1] section 7, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          }
+        ],
+        "mean_total": 26.0,
+        "min_total": 26,
+        "max_total": 26,
+        "neighbor_count": 0,
+        "context_char_len": 4189,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible, and there is no specific mention of a maximum notice period."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT block [1] (employee_handbook.md, chunk_index=5), the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT block [1] (employee_handbook.md, chunk_index=5), the employee PTO notice period is at least **7 days** in advance when possible."
+          }
+        ],
+        "mean_total": 26.0,
+        "min_total": 26,
+        "max_total": 26,
+        "neighbor_count": 5,
+        "context_char_len": 6521,
+        "irrelevant_neighbor_count": 5,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT [1] section 7. Time Off, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=True",
+            "answer_preview": "According to CONTEXT [1] section 7. Time Off, when possible, employees should submit PTO requests at least **7 days** in advance."
+          }
+        ],
+        "mean_total": 26.333333333333332,
+        "min_total": 26,
+        "max_total": 27,
+        "neighbor_count": 1,
+        "context_char_len": 4750,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT [1] section 7, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          }
+        ],
+        "mean_total": 26.0,
+        "min_total": 26,
+        "max_total": 26,
+        "neighbor_count": 0,
+        "context_char_len": 4189,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT [1] section 7, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          }
+        ],
+        "mean_total": 26.0,
+        "min_total": 26,
+        "max_total": 26,
+        "neighbor_count": 0,
+        "context_char_len": 4189,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to CONTEXT [1] section 7, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 202,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          },
+          {
+            "seed": 303,
+            "total": 26,
+            "scores": {
+              "correctness": 4,
+              "completeness": 3,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "pto=True manager=False",
+            "answer_preview": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible."
+          }
+        ],
+        "mean_total": 26.0,
+        "min_total": 26,
+        "max_total": 26,
+        "neighbor_count": 0,
+        "context_char_len": 4189,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q5": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=False",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and a"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=False",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The exact steps are not specified in the provided documents, but it is mentioned that you should include the order nu"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=False",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information, such as order number, product SKUs, and reason for the request. The exact step"
+          }
+        ],
+        "mean_total": 18.0,
+        "min_total": 18,
+        "max_total": 18,
+        "neighbor_count": 0,
+        "context_char_len": 4482,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with a specific category, such as \"bill\", \"shipping\", \"product_defect\", \"refund_request\", \"account\", or \"general_inquiry\". The CONTEXT does not "
+          },
+          {
+            "seed": 202,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The supported categories are:\n\n- billing\n- shipping\n- product_defect\n- refund_request\n- account\n- general_inquiry\n\nYo"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22481 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information. The exact steps are not specified in the provided documents, but it is mention"
+          }
+        ],
+        "mean_total": 24.0,
+        "min_total": 18,
+        "max_total": 27,
+        "neighbor_count": 8,
+        "context_char_len": 8962,
+        "irrelevant_neighbor_count": 7,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with a specific category, such as \"bill\", \"shipping\", \"product_defect\", \"refund_request\", \"account\", or \"general_inquiry\". The CONTEXT does not "
+          },
+          {
+            "seed": 202,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The supported categories are:\n\n- billing\n- shipping\n- product_defect\n- refund_request\n- account\n- general_inquiry\n\nYo"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and a"
+          }
+        ],
+        "mean_total": 24.0,
+        "min_total": 18,
+        "max_total": 27,
+        "neighbor_count": 1,
+        "context_char_len": 5043,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and providing the required information. The exact steps are not specified in the provided documents, but it is mention"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22481 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and providing the required information. The exact steps are not specified in the provided documents, but it is mention"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and a"
+          }
+        ],
+        "mean_total": 18.0,
+        "min_total": 18,
+        "max_total": 18,
+        "neighbor_count": 4,
+        "context_char_len": 6817,
+        "irrelevant_neighbor_count": 3,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information. The exact steps are outlined in section 4 of the Customer Support Guidelines:\n"
+          },
+          {
+            "seed": 202,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The supported categories are:\n\n- billing\n- shipping\n- product_defect\n- refund_request\n- account\n- general_inquiry\n\nYo"
+          },
+          {
+            "seed": 303,
+            "total": 27,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "listed_cats\u22485 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The supported categories are:\n\n* bill\n* shipping\n* product_defect\n* refund_request\n* account\n* general_inquiry\n\nYou c"
+          }
+        ],
+        "mean_total": 24.0,
+        "min_total": 18,
+        "max_total": 27,
+        "neighbor_count": 2,
+        "context_char_len": 5708,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and a"
+          },
+          {
+            "seed": 202,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22480 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required fields, such as a valid customer reference, clear subject line, detailed description, and a"
+          },
+          {
+            "seed": 303,
+            "total": 18,
+            "scores": {
+              "correctness": 2,
+              "completeness": 2,
+              "evidence_utilization": 2,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 2,
+              "relevance": 3,
+              "source_consistency": 3
+            },
+            "note": "listed_cats\u22481 invented_ui=False has_cat_chunk=True",
+            "answer_preview": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and providing the required information. The exact steps are not specified in the provided documents, but it is mention"
+          }
+        ],
+        "mean_total": 18.0,
+        "min_total": 18,
+        "max_total": 18,
+        "neighbor_count": 3,
+        "context_char_len": 6269,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q6": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a refund for defective products."
+          },
+          {
+            "seed": 202,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to CONTEXT [3], photographic evidence or a support ticket is required to support the claim of a defective product."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to CONTEXT [3], photographic evidence or a support ticket is required to support a refund for defective products."
+          }
+        ],
+        "mean_total": 28.0,
+        "min_total": 28,
+        "max_total": 28,
+        "neighbor_count": 0,
+        "context_char_len": 4455,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket\n\nAdditionally, it is mentioned that \"No restocking fee applies for defective, damaged, or incorrectly"
+          },
+          {
+            "seed": 202,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket\n\nAdditionally, it is mentioned that \"No restocking fee applies for defective, damaged, or incorrectly"
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n- Photographic evidence\n- A support ticket"
+          }
+        ],
+        "mean_total": 28.0,
+        "min_total": 28,
+        "max_total": 28,
+        "neighbor_count": 8,
+        "context_char_len": 8587,
+        "irrelevant_neighbor_count": 8,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support refund requests for defective products."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], for defective products, \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\" However, no specific evidence is mentioned as required for defective products."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], for defective products, \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\" However, no specific evidence is mentioned as required for defective products."
+          }
+        ],
+        "mean_total": 16.0,
+        "min_total": 10,
+        "max_total": 28,
+        "neighbor_count": 2,
+        "context_char_len": 5235,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ],
+        "mean_total": 16.0,
+        "min_total": 10,
+        "max_total": 28,
+        "neighbor_count": 2,
+        "context_char_len": 5653,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ],
+        "mean_total": 16.0,
+        "min_total": 10,
+        "max_total": 28,
+        "neighbor_count": 2,
+        "context_char_len": 5653,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 28,
+            "scores": {
+              "correctness": 4,
+              "completeness": 4,
+              "evidence_utilization": 4,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 4,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "photo=True ticket=True",
+            "answer_preview": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "scores": {
+              "correctness": 1,
+              "completeness": 1,
+              "evidence_utilization": 1,
+              "unsupported_claims": 2,
+              "conditions_exceptions": 1,
+              "relevance": 2,
+              "source_consistency": 2
+            },
+            "note": "REGRESSION: denies/misses photographic evidence",
+            "answer_preview": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ],
+        "mean_total": 16.0,
+        "min_total": 10,
+        "max_total": 28,
+        "neighbor_count": 2,
+        "context_char_len": 5653,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    },
+    "Q7": {
+      "OFF": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. The customer submits a refund request through a support ticket with category `refund_request`.\n2. The customer includes the order number, product SKUs, "
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` (section 8. How to Request a Refund).\n2. Include the order number, product SKUs, and reason for the"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 0,
+        "context_char_len": 4439,
+        "irrelevant_neighbor_count": 0,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "BLIND": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. **Open a support ticket**: With category `refund_request`, including the order number, product SKUs, and reason.\n2. **Wait for an agent to approve or re"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. **Open a support ticket**: With category `refund_request`, including the order number, product SKUs, and reason.\n2. **Wait for an agent to approve or re"
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 3,
+        "context_char_len": 5810,
+        "irrelevant_neighbor_count": 3,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "A_TABLE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` (Section 8. How to Request a Refund).\n2. Include the order number, product SKUs, and reason for the"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` (Section 8. How to Request a Refund).\n2. Include the order number, product SKUs, and reason for the"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 1,
+        "context_char_len": 4986,
+        "irrelevant_neighbor_count": 1,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "C_EVIDENCE": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. The customer submits a refund request through a support ticket with category `refund_request`.\n2. The customer includes the order number, product SKUs, "
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 2,
+        "context_char_len": 5159,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP2": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. The customer submits a refund request through a support ticket with category `refund_request`.\n2. The customer includes the order number, product SKUs, "
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 2,
+        "context_char_len": 5159,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      },
+      "HYBRID_CAP3": {
+        "runs": [
+          {
+            "seed": 101,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          },
+          {
+            "seed": 202,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. The customer submits a refund request through a support ticket with category `refund_request`.\n2. The customer includes the order number, product SKUs, "
+          },
+          {
+            "seed": 303,
+            "total": 23,
+            "scores": {
+              "correctness": 3,
+              "completeness": 2,
+              "evidence_utilization": 3,
+              "unsupported_claims": 4,
+              "conditions_exceptions": 3,
+              "relevance": 4,
+              "source_consistency": 4
+            },
+            "note": "vpn=False patch=False",
+            "answer_preview": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to appr"
+          }
+        ],
+        "mean_total": 23.0,
+        "min_total": 23,
+        "max_total": 23,
+        "neighbor_count": 2,
+        "context_char_len": 5159,
+        "irrelevant_neighbor_count": 2,
+        "cap_respected": true,
+        "answers_identical_across_seeds": false
+      }
+    }
+  },
+  "aggregates": {
+    "OFF": {
+      "mean_total": 22.333,
+      "median_total": 21,
+      "std_total": 3.834,
+      "min_total": 17,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 19.666666666666668,
+        "Q2": 22.666666666666668,
+        "Q3": 19.0,
+        "Q4": 26.0,
+        "Q5": 18.0,
+        "Q6": 28.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 4405.4,
+      "max_context_chars": 4482,
+      "mean_neighbors": 0.0,
+      "mean_irrelevant_neighbors": 0.0
+    },
+    "BLIND": {
+      "mean_total": 23.429,
+      "median_total": 23,
+      "std_total": 3.26,
+      "min_total": 18,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 22.333333333333332,
+        "Q2": 20.0,
+        "Q3": 20.666666666666668,
+        "Q4": 26.0,
+        "Q5": 24.0,
+        "Q6": 28.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 7687.0,
+      "max_context_chars": 9457,
+      "mean_neighbors": 6.29,
+      "mean_irrelevant_neighbors": 5.86
+    },
+    "A_TABLE": {
+      "mean_total": 22.095,
+      "median_total": 23,
+      "std_total": 5.098,
+      "min_total": 10,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 23.666666666666668,
+        "Q2": 22.666666666666668,
+        "Q3": 19.0,
+        "Q4": 26.333333333333332,
+        "Q5": 24.0,
+        "Q6": 16.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 4990.3,
+      "max_context_chars": 5235,
+      "mean_neighbors": 1.14,
+      "mean_irrelevant_neighbors": 0.86
+    },
+    "C_EVIDENCE": {
+      "mean_total": 22.0,
+      "median_total": 23,
+      "std_total": 4.995,
+      "min_total": 10,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 23.666666666666668,
+        "Q2": 22.666666666666668,
+        "Q3": 24.666666666666668,
+        "Q4": 26.0,
+        "Q5": 18.0,
+        "Q6": 16.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 5444.1,
+      "max_context_chars": 6817,
+      "mean_neighbors": 2.0,
+      "mean_irrelevant_neighbors": 1.57
+    },
+    "HYBRID_CAP2": {
+      "mean_total": 22.857,
+      "median_total": 23,
+      "std_total": 5.007,
+      "min_total": 10,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 23.666666666666668,
+        "Q2": 22.666666666666668,
+        "Q3": 24.666666666666668,
+        "Q4": 26.0,
+        "Q5": 24.0,
+        "Q6": 16.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 5182.9,
+      "max_context_chars": 5708,
+      "mean_neighbors": 1.43,
+      "mean_irrelevant_neighbors": 1.0
+    },
+    "HYBRID_CAP3": {
+      "mean_total": 22.0,
+      "median_total": 23,
+      "std_total": 4.995,
+      "min_total": 10,
+      "max_total": 28,
+      "n_scores": 21,
+      "per_question_mean": {
+        "Q1": 23.666666666666668,
+        "Q2": 22.666666666666668,
+        "Q3": 24.666666666666668,
+        "Q4": 26.0,
+        "Q5": 18.0,
+        "Q6": 16.0,
+        "Q7": 23.0
+      },
+      "mean_context_chars": 5287.7,
+      "max_context_chars": 6269,
+      "mean_neighbors": 1.71,
+      "mean_irrelevant_neighbors": 1.29
+    }
+  }
+}

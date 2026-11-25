@@ -1,0 +1,429 @@
+{
+  "experiment": "selective_expansion_step5",
+  "results_file": "experiments/retrieval_eval/selective_expansion_results.json",
+  "rubric": "Step3 0-4 seven metrics; unsupported_claims higher=fewer",
+  "per_query_metric_scores": {
+    "Q1": {
+      "OFF": {
+        "correctness": 3,
+        "completeness": 1,
+        "evidence_utilization": 2,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Only Standard Ground; omits processing/15:00 present in #1; vague vary caveat."
+      },
+      "BLIND": {
+        "correctness": 3,
+        "completeness": 2,
+        "evidence_utilization": 2,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full methods from #2; Overnight '1 business day' imprecise; drops processing/15:00."
+      },
+      "A_TABLE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 4,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Methods + 1-2 processing + 15:00; Overnight wording exact."
+      },
+      "B_PROCEDURE": {
+        "correctness": 3,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Only SG; wrong neighbor (#3) not table."
+      },
+      "C_EVIDENCE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 3,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Methods + 15:00; omits explicit 1-2 processing days."
+      }
+    },
+    "Q2": {
+      "OFF": {
+        "correctness": 3,
+        "completeness": 2,
+        "evidence_utilization": 2,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Mentions 7-day refund offer; omits verify/contact steps."
+      },
+      "BLIND": {
+        "correctness": 3,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 4,
+        "source_consistency": 3,
+        "note": "One-line summary; loses steps; phrasing 'overdue by 7 days' soft."
+      },
+      "A_TABLE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 4,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full 3-step procedure; neighbor was table but answer used #5 well."
+      },
+      "B_PROCEDURE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 4,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full 3-step procedure."
+      },
+      "C_EVIDENCE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 4,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full 3 steps with confirmed-lost condition."
+      }
+    },
+    "Q3": {
+      "OFF": {
+        "correctness": 2,
+        "completeness": 1,
+        "evidence_utilization": 2,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "No 7-day rule (#5 missing); hedges; some process speculation."
+      },
+      "BLIND": {
+        "correctness": 2,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 4,
+        "note": "#5 present but unused; generic eligibility hedge."
+      },
+      "A_TABLE": {
+        "correctness": 2,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Expanded wrong table (#4 refund); still missing #5."
+      },
+      "B_PROCEDURE": {
+        "correctness": 3,
+        "completeness": 3,
+        "evidence_utilization": 3,
+        "unsupported_claims": 2,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "States 7-day rule; conflates with 14/30 eligibility windows."
+      },
+      "C_EVIDENCE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Clear 7-day lost-package offer; notes not automatic."
+      }
+    },
+    "Q4": {
+      "OFF": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Correct 7-day PTO."
+      },
+      "BLIND": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Correct; extra neighbors unused."
+      },
+      "A_TABLE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Correct despite irrelevant support neighbor."
+      },
+      "B_PROCEDURE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Correct."
+      },
+      "C_EVIDENCE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Correct; no expansion."
+      }
+    },
+    "Q5": {
+      "OFF": {
+        "correctness": 2,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 2,
+        "note": "No categories; digresses into agent style tips."
+      },
+      "BLIND": {
+        "correctness": 3,
+        "completeness": 3,
+        "evidence_utilization": 3,
+        "unsupported_claims": 2,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Some categories/fields; invents website portal path."
+      },
+      "A_TABLE": {
+        "correctness": 3,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 1,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 2,
+        "note": "Categories present; invents website Contact Us UI steps not in docs."
+      },
+      "B_PROCEDURE": {
+        "correctness": 2,
+        "completeness": 1,
+        "evidence_utilization": 1,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 2,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Misses #1 categories; vague."
+      },
+      "C_EVIDENCE": {
+        "correctness": 3,
+        "completeness": 3,
+        "evidence_utilization": 3,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 3,
+        "note": "Has #1 in context; answer emphasizes fields more than category list."
+      }
+    },
+    "Q6": {
+      "OFF": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Photo or ticket."
+      },
+      "BLIND": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Photo + ticket."
+      },
+      "A_TABLE": {
+        "correctness": 1,
+        "completeness": 1,
+        "evidence_utilization": 0,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 1,
+        "relevance": 2,
+        "source_consistency": 2,
+        "note": "Misses photo evidence despite in retrieved #1; distracted by restocking."
+      },
+      "B_PROCEDURE": {
+        "correctness": 4,
+        "completeness": 3,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Photo/ticket clear."
+      },
+      "C_EVIDENCE": {
+        "correctness": 3,
+        "completeness": 3,
+        "evidence_utilization": 3,
+        "unsupported_claims": 3,
+        "conditions_exceptions": 3,
+        "relevance": 3,
+        "source_consistency": 3,
+        "note": "Correct photo/ticket but awkward restocking phrasing."
+      }
+    },
+    "Q7": {
+      "OFF": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full process."
+      },
+      "BLIND": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full process."
+      },
+      "A_TABLE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full process."
+      },
+      "B_PROCEDURE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full process."
+      },
+      "C_EVIDENCE": {
+        "correctness": 4,
+        "completeness": 4,
+        "evidence_utilization": 4,
+        "unsupported_claims": 4,
+        "conditions_exceptions": 3,
+        "relevance": 4,
+        "source_consistency": 4,
+        "note": "Full process."
+      }
+    }
+  },
+  "per_query_totals": {
+    "Q1": {
+      "OFF": 17,
+      "BLIND": 20,
+      "A_TABLE": 28,
+      "B_PROCEDURE": 17,
+      "C_EVIDENCE": 25
+    },
+    "Q2": {
+      "OFF": 21,
+      "BLIND": 17,
+      "A_TABLE": 28,
+      "B_PROCEDURE": 28,
+      "C_EVIDENCE": 28
+    },
+    "Q3": {
+      "OFF": 16,
+      "BLIND": 16,
+      "A_TABLE": 15,
+      "B_PROCEDURE": 19,
+      "C_EVIDENCE": 26
+    },
+    "Q4": {
+      "OFF": 26,
+      "BLIND": 26,
+      "A_TABLE": 26,
+      "B_PROCEDURE": 26,
+      "C_EVIDENCE": 26
+    },
+    "Q5": {
+      "OFF": 14,
+      "BLIND": 19,
+      "A_TABLE": 19,
+      "B_PROCEDURE": 15,
+      "C_EVIDENCE": 22
+    },
+    "Q6": {
+      "OFF": 26,
+      "BLIND": 26,
+      "A_TABLE": 10,
+      "B_PROCEDURE": 26,
+      "C_EVIDENCE": 21
+    },
+    "Q7": {
+      "OFF": 27,
+      "BLIND": 27,
+      "A_TABLE": 27,
+      "B_PROCEDURE": 27,
+      "C_EVIDENCE": 27
+    }
+  },
+  "mean_totals": {
+    "OFF": 21.0,
+    "BLIND": 21.571428571428573,
+    "A_TABLE": 21.857142857142858,
+    "B_PROCEDURE": 22.571428571428573,
+    "C_EVIDENCE": 25.0
+  }
+}

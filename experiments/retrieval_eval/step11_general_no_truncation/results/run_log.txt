@@ -1,0 +1,882 @@
+
+=== Q28: When are address changes allowed after an order is placed? ===
+2026-11-24 14:49:30 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=58
+2026-11-24 14:49:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:49:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], address changes are allowed only before the shipping l
+2026-11-24 14:49:55 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, address changes are allowed only before the s
+2026-11-24 14:50:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, address changes are allowed only before the s
+2026-11-24 14:50:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, address changes are allowed only before the s
+2026-11-24 14:50:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=5 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:17 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=5 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=5 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=5 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=5 total=28 ans=According to the CONTEXT, address changes are allowed only before the shipping l
+2026-11-24 14:50:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:26 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:31 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:33 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=2 total=28 ans=According to the CONTEXT, address changes are allowed only before the shipping l
+2026-11-24 14:50:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:37 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=2 total=28 ans=Address changes are allowed only before the shipping label is created. After shi
+2026-11-24 14:50:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=2 total=28 ans=According to the CONTEXT, address changes are allowed only before the shipping l
+
+=== Q29: What is the first-response SLA for an urgent support ticket? ===
+2026-11-24 14:50:40 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=60
+2026-11-24 14:50:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:50:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [3], the first-response SLA for an urgent support ticket is
+2026-11-24 14:50:47 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the first-response SLA for an **urgent** supp
+2026-11-24 14:50:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the first-response SLA for an **urgent** supp
+2026-11-24 14:50:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the First Response SLA for an **urgent** supp
+2026-11-24 14:50:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=The first-response SLA for an urgent support ticket is 30 minutes.
+2026-11-24 14:50:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=3 total=28 ans=According to the provided CONTEXT, the First Response SLA for an **urgent** supp
+2026-11-24 14:50:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=3 total=28 ans=According to CONTEXT [3], the First Response SLA for an **urgent** support ticke
+2026-11-24 14:51:00 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=3 total=28 ans=According to CONTEXT [3], the First Response SLA for an **urgent** support ticke
+2026-11-24 14:51:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=3 total=28 ans=According to CONTEXT [3], the first-response SLA for an **urgent** support ticke
+2026-11-24 14:51:03 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=3 total=28 ans=According to CONTEXT block [3], the First Response SLA for an **urgent** support
+2026-11-24 14:51:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, the First Response SLA for an **urgent** supp
+2026-11-24 14:51:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an **urgent** support ticke
+2026-11-24 14:51:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an **urgent** support ticke
+2026-11-24 14:51:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to CONTEXT [3], the First Response SLA for an **urgent** support ticke
+2026-11-24 14:51:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an urgent support ticket is
+2026-11-24 14:51:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, the First Response SLA for an **urgent** supp
+2026-11-24 14:51:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an **urgent** support ticke
+2026-11-24 14:51:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an **urgent** support ticke
+2026-11-24 14:51:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to CONTEXT [3], the First Response SLA for an **urgent** support ticke
+2026-11-24 14:51:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to CONTEXT [3], the first-response SLA for an urgent support ticket is
+
+=== Q30: What is the resolution target for high-priority support tickets? ===
+2026-11-24 14:51:23 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=64
+2026-11-24 14:51:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:51:28 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:51:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:51:31 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:51:33 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:51:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to CONTEXT block [3] role=retrieved source=customer_support_guidelines
+2026-11-24 14:51:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=3 total=28 ans=According to the provided CONTEXT, the resolution target for high-priority suppo
+2026-11-24 14:51:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=3 total=28 ans=According to CONTEXT [3], the resolution target for high-priority support ticket
+2026-11-24 14:51:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=3 total=28 ans=According to CONTEXT [3], the resolution target for high-priority support ticket
+2026-11-24 14:51:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=3 total=28 ans=According to CONTEXT [3], the resolution target for high-priority support ticket
+2026-11-24 14:51:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=3 total=28 ans=According to CONTEXT block [3] role=retrieved source=employee_handbook.md chunk_
+2026-11-24 14:51:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:03 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=0 total=28 ans=According to CONTEXT block [3] role=retrieved source=customer_support_guidelines
+2026-11-24 14:52:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=The resolution target for high-priority support tickets is 1 business day.
+2026-11-24 14:52:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=According to CONTEXT block [3] role=retrieved source=customer_support_guidelines
+
+=== Q31: Which fields must every support ticket include? ===
+2026-11-24 14:52:30 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=47
+2026-11-24 14:52:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:52:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:52:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:52:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:52:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:52:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:52:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=3 total=28 ans=According to the provided CONTEXT, every support ticket must include the followi
+2026-11-24 14:53:00 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=3 total=28 ans=According to CONTEXT [1], every ticket must include the following fields:  - Val
+2026-11-24 14:53:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=3 total=28 ans=According to CONTEXT [1], every support ticket must include the following fields
+2026-11-24 14:53:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=3 total=28 ans=According to CONTEXT [1], every support ticket must include the following fields
+2026-11-24 14:53:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=3 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:37 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+2026-11-24 14:53:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=Every support ticket must include the following fields:  - Valid customer refere
+
+=== Q32: Can a ticket move from open directly to closed without a resolution note? ===
+2026-11-24 14:53:41 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=73
+2026-11-24 14:53:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:53:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=No, a ticket cannot skip from "open" directly to "closed" without a resolution n
+2026-11-24 14:53:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:53:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:53:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=No, according to the provided context, a ticket cannot skip from "open" directly
+2026-11-24 14:53:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, no, a ticket cannot skip from `open` directly
+2026-11-24 14:54:03 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=28 ans=No, a ticket cannot move from "open" directly to "closed" without a resolution n
+2026-11-24 14:54:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from "open" directly
+2026-11-24 14:54:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from "open" directly
+2026-11-24 14:54:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from "open" directly
+2026-11-24 14:54:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from "open" directly
+2026-11-24 14:54:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=No, a ticket cannot skip from "open" directly to "closed" without a resolution n
+2026-11-24 14:54:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:54:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:54:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=No, according to the provided documents, a ticket cannot skip from "open" direct
+2026-11-24 14:54:28 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, no, a ticket cannot skip from `open` directly
+2026-11-24 14:54:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=No, a ticket cannot skip from "open" directly to "closed" without a resolution n
+2026-11-24 14:54:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:54:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=No, according to the provided CONTEXT, a ticket cannot skip from `open` directly
+2026-11-24 14:54:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=No, according to the provided documents, a ticket cannot skip from "open" direct
+2026-11-24 14:54:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, no, a ticket cannot skip from `open` directly
+
+=== Q33: How long do card refunds typically take to appear? ===
+2026-11-24 14:54:38 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=50
+2026-11-24 14:54:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:54:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:44 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:44 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:53 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:53 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:55 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:55 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:54:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:55:00 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:55:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+2026-11-24 14:55:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=Card refunds typically appear in **3–5 business days**.
+
+=== Q34: How long may bank-transfer refunds take? ===
+2026-11-24 14:55:02 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=40
+2026-11-24 14:55:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:55:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=4 total=28 ans=According to CONTEXT [1], bank transfers may take **5–10 business days**.
+2026-11-24 14:55:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=4 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=4 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=4 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:17 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=4 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:26 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+2026-11-24 14:55:26 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, bank transfers may take **5–10 business days*
+
+=== Q35: When is shipping cost refunded on a return? ===
+2026-11-24 14:55:26 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=43
+2026-11-24 14:55:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:55:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], shipping is refunded only when the entire order is ret
+2026-11-24 14:55:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:55:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:55:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:55:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:55:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=3 total=28 ans=According to the provided CONTEXT, shipping cost is refunded only when the entir
+2026-11-24 14:55:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=3 total=28 ans=According to the provided CONTEXT, shipping cost is refunded only when the entir
+2026-11-24 14:55:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=3 total=28 ans=According to the provided CONTEXT, shipping cost is refunded only when the entir
+2026-11-24 14:55:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=3 total=28 ans=According to the provided CONTEXT, shipping cost is refunded only when the entir
+2026-11-24 14:55:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=3 total=28 ans=According to the provided CONTEXT, shipping cost is refunded only when the entir
+2026-11-24 14:55:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to CONTEXT [1], shipping is refunded only when the entire order is ret
+2026-11-24 14:55:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to CONTEXT [1], shipping is refunded only when the entire order is ret
+2026-11-24 14:56:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+2026-11-24 14:56:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, shipping is refunded only when the entire ord
+
+=== Q36: What email should be used for security incidents? ===
+2026-11-24 14:56:21 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=49
+2026-11-24 14:56:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:56:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:26 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:28 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=7 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=7 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:37 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=7 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=7 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=7 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=2 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:44 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=2 total=28 ans=According to the provided CONTEXT, the email for reporting security incidents is
+2026-11-24 14:56:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+2026-11-24 14:56:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=2 total=28 ans=According to the provided CONTEXT, the email address for reporting security inci
+
+=== Q37: What retention period applies to security logs? ===
+2026-11-24 14:56:51 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=47
+2026-11-24 14:56:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:56:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], the retention period for Security logs is 12 months.
+2026-11-24 14:56:55 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:56:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:56:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:56:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=8 total=28 ans=According to CONTEXT [1], the retention period for Security logs is 12 months.
+2026-11-24 14:57:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=8 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:57:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=8 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:57:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=8 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=8 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:57:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to CONTEXT [1], the retention period for Security logs is 12 months.
+2026-11-24 14:57:11 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:57:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to CONTEXT [1], the retention period for Security logs is 12 months.
+2026-11-24 14:57:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+2026-11-24 14:57:17 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, security logs are retained for 12 months.
+2026-11-24 14:57:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, the retention period for Security logs is 12 
+
+=== Q38: Does NovaForge store full payment card numbers? ===
+2026-11-24 14:57:18 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=47
+2026-11-24 14:57:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:57:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=20 ans=According to CONTEXT [2] role=retrieved source=privacy_policy.md chunk_index=0 s
+2026-11-24 14:57:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:28 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:35 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=5 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=5 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=5 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=5 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=5 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to CONTEXT [2] role=retrieved source=privacy_policy.md chunk_index=0 s
+2026-11-24 14:57:47 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+2026-11-24 14:57:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to CONTEXT [2] role=retrieved source=privacy_policy.md chunk_index=0 s
+2026-11-24 14:57:55 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to the retrieved documents, NovaForge does **not** store full payment 
+2026-11-24 14:57:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, NovaForge does **not** store full payment car
+
+=== Q39: Backorders above what quantity require Operations Manager approval? ===
+2026-11-24 14:57:58 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=67
+2026-11-24 14:57:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:58:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:03 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to CONTEXT [1], Backorders require Operations Manager approval for qua
+2026-11-24 14:58:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to CONTEXT block [1], backorders above **50 units** require Operations
+2026-11-24 14:58:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=8 total=28 ans=According to CONTEXT block [1], backorders above **50 units** require Operations
+2026-11-24 14:58:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=8 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=8 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=8 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=8 total=28 ans=According to the CONTEXT, backorders above **50 units** require Operations Manag
+2026-11-24 14:58:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to CONTEXT [1], Backorders require Operations Manager approval for qua
+2026-11-24 14:58:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to CONTEXT block [1], backorders above **50 units** require Operations
+2026-11-24 14:58:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, backorders above **50 units** require Operati
+2026-11-24 14:58:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:26 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to CONTEXT [1], backorders above **50 units** require Operations Manag
+2026-11-24 14:58:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to CONTEXT [1], Backorders require Operations Manager approval for qua
+2026-11-24 14:58:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to CONTEXT block [1], backorders above **50 units** require Operations
+
+=== Q40: For furniture packages over what weight are freight appointments mandatory? ===
+2026-11-24 14:58:28 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=75
+2026-11-24 14:58:28 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:58:31 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:33 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=28 ans=For packages over **70 lb**, freight appointment delivery is mandatory.
+2026-11-24 14:58:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:46 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:47 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=For packages over 70 lb, freight delivery appointments are mandatory.
+2026-11-24 14:58:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=For furniture packages, freight appointments are mandatory for packages over **7
+2026-11-24 14:58:53 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=For packages over 70 lb, freight delivery appointments are mandatory.
+
+=== Q41: What is the standard warranty period for monitors? ===
+2026-11-24 14:58:53 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=50
+2026-11-24 14:58:53 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:58:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:58:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:58:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:58:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:00 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=The standard warranty period for monitors is 24 months.
+2026-11-24 14:59:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=4 total=28 ans=According to CONTEXT [1], the standard warranty period for monitors is 24 months
+2026-11-24 14:59:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=4 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=4 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=4 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=4 total=28 ans=The standard warranty period for monitors is 24 months.
+2026-11-24 14:59:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:11 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=0 total=28 ans=The standard warranty period for monitors is 24 months.
+2026-11-24 14:59:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the standard warranty period for monitors is 
+2026-11-24 14:59:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=The standard warranty period for monitors is 24 months.
+
+=== Q42: What information should agents collect when issuing a hardware replacement? ===
+2026-11-24 14:59:14 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=75
+2026-11-24 14:59:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 14:59:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, when issuing a hardware replacement, agents s
+2026-11-24 14:59:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 14:59:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 14:59:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 14:59:33 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 14:59:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=7 total=28 ans=According to the provided CONTEXT, when issuing a hardware replacement, agents s
+2026-11-24 14:59:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=7 total=28 ans=According to CONTEXT [1], when issuing a hardware replacement, agents should col
+2026-11-24 14:59:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=7 total=28 ans=According to CONTEXT [1], when issuing a hardware replacement, agents should col
+2026-11-24 14:59:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=7 total=28 ans=According to CONTEXT [1], when issuing a hardware replacement, agents should col
+2026-11-24 14:59:47 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=7 total=28 ans=According to CONTEXT block [1], when issuing a hardware replacement, agents shou
+2026-11-24 14:59:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, when issuing a hardware replacement, agents s
+2026-11-24 14:59:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 14:59:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:03 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, when issuing a hardware replacement, agents s
+2026-11-24 15:00:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+2026-11-24 15:00:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=2 total=28 ans=According to CONTEXT [1] and [7], when issuing a hardware replacement, agents sh
+
+=== Q43: Who must pre-approve overtime for fulfillment peaks? ===
+2026-11-24 15:00:15 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=52
+2026-11-24 15:00:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 15:00:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:21 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, an Operations Manager must pre-approve overti
+2026-11-24 15:00:22 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=8 total=28 ans=According to CONTEXT block [1], Overtime for fulfillment peaks must be pre-appro
+2026-11-24 15:00:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=8 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=8 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:31 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=8 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=8 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:35 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:37 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:39 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to CONTEXT, Overtime for fulfillment peaks must be pre-approved by an 
+2026-11-24 15:00:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, overtime for fulfillment peaks must be pre-ap
+2026-11-24 15:00:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to CONTEXT [1], Overtime for fulfillment peaks must be pre-approved by
+2026-11-24 15:00:44 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to CONTEXT, Overtime for fulfillment peaks must be pre-approved by an 
+
+=== Q44: Within how many business hours should support agents acknowledge new tickets? ===
+2026-11-24 15:00:44 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=77
+2026-11-24 15:00:44 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 15:00:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, support agents should acknowledge new tickets
+2026-11-24 15:00:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to CONTEXT [2], support agents should acknowledge new tickets within *
+2026-11-24 15:00:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to CONTEXT [2], support agents should acknowledge new tickets within *
+2026-11-24 15:00:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to CONTEXT [2], support agents should acknowledge new tickets within *
+2026-11-24 15:00:52 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:00:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=4 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:00:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=4 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:00:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=4 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:00:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=4 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:01:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=4 total=28 ans=According to CONTEXT [3] role=retrieved source=employee_handbook.md chunk_index=
+2026-11-24 15:01:04 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, support agents should acknowledge new tickets
+2026-11-24 15:01:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=2 total=28 ans=According to CONTEXT [6] role=retrieved source=employee_handbook.md chunk_index=
+2026-11-24 15:01:09 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=2 total=28 ans=According to CONTEXT [6] role=retrieved source=employee_handbook.md chunk_index=
+2026-11-24 15:01:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=2 total=28 ans=According to CONTEXT [2], support agents should acknowledge new tickets within *
+2026-11-24 15:01:11 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=2 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+2026-11-24 15:01:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=2 total=28 ans=According to the provided CONTEXT, support agents should acknowledge new tickets
+2026-11-24 15:01:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=2 total=28 ans=According to CONTEXT [6] role=retrieved source=employee_handbook.md chunk_index=
+2026-11-24 15:01:16 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=2 total=28 ans=According to CONTEXT [6] role=retrieved source=employee_handbook.md chunk_index=
+2026-11-24 15:01:18 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=2 total=28 ans=According to CONTEXT [2], support agents should acknowledge new tickets within *
+2026-11-24 15:01:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=2 total=28 ans=Support agents should acknowledge new tickets within **4 business hours**.
+
+=== Q45: What evidence is required for monitor pixel-defect replacement eligibility? ===
+2026-11-24 15:01:19 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=75
+2026-11-24 15:01:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 15:01:25 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], panel pixel defects follow ISO 9241-307 Class II crite
+2026-11-24 15:01:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:32 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, for monitor pixel-defect replacement eligibil
+2026-11-24 15:01:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:40 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:43 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=28 ans=According to the provided CONTEXT, for monitor pixel-defect replacement eligibil
+2026-11-24 15:01:50 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to CONTEXT [1], panel pixel defects follow ISO 9241-307 Class II crite
+2026-11-24 15:01:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:01:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:02:00 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, for monitor pixel-defect replacement eligibil
+2026-11-24 15:02:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:02:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=According to CONTEXT [1], panel pixel defects follow ISO 9241-307 Class II crite
+2026-11-24 15:02:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:02:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+2026-11-24 15:02:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, for monitor pixel-defect replacement eligibil
+2026-11-24 15:02:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, panel pixel defects follow ISO 9241-307 Class
+
+=== Q46: What steps should support agents follow when a package is overdue? ===
+2026-11-24 15:02:14 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=66
+2026-11-24 15:02:14 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 15:02:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to CONTEXT [1], when a package is overdue, support agents must:  1. Ve
+2026-11-24 15:02:24 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:29 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:33 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:37 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=16 ans=According to CONTEXT [1], when a package is overdue, support agents must:  1. Ve
+2026-11-24 15:02:48 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=16 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:51 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=16 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:56 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=16 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:02:59 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=16 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:03:06 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=2 total=28 ans=According to CONTEXT [1], when a package is overdue, support agents must:  1. Ve
+2026-11-24 15:03:10 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=2 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents sho
+2026-11-24 15:03:13 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=2 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents sho
+2026-11-24 15:03:17 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=2 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents sho
+2026-11-24 15:03:20 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=2 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents sho
+2026-11-24 15:03:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=0 total=28 ans=According to CONTEXT [1], when a package is overdue, support agents must:  1. Ve
+2026-11-24 15:03:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:03:34 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:03:38 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+2026-11-24 15:03:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, when a package is overdue, support agents mus
+
+=== Q47: What is the escalation path process for support tickets? ===
+2026-11-24 15:03:42 | INFO | app.services.embedding_client | Embedding request model=nomic-embed-text chars=56
+2026-11-24 15:03:42 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/embeddings "HTTP/1.1 200 OK"
+2026-11-24 15:03:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=101: nbr=0 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:03:54 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=202: nbr=0 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:03:58 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=303: nbr=0 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:02 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=404: nbr=0 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:07 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  OFF seed=505: nbr=0 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:15 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=101: nbr=6 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:19 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=202: nbr=6 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:23 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=303: nbr=6 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:27 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=404: nbr=6 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:30 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  BLIND seed=505: nbr=6 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:36 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:41 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:45 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:49 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:53 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  HYBRID_CAP2 seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:04:57 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=101: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:05:01 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=202: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:05:05 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=303: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:05:08 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=404: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+2026-11-24 15:05:12 | INFO | httpx | HTTP Request: POST http://127.0.0.1:11434/api/chat "HTTP/1.1 200 OK"
+  GENERAL_NO_TRUNCATION seed=505: nbr=1 total=28 ans=According to the provided CONTEXT, the escalation path process for support ticke
+
+Wrote experiments/retrieval_eval/step11_general_no_truncation/results/step11_results.json

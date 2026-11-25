@@ -1,0 +1,1057 @@
+{
+  "meta": {
+    "source_results": "experiments/retrieval_eval/hybrid_expansion_stability_results.json",
+    "source_scores": "experiments/retrieval_eval/hybrid_expansion_stability_scores.json",
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "configs": [
+      "OFF",
+      "BLIND",
+      "A_TABLE",
+      "C_EVIDENCE",
+      "HYBRID_CAP2",
+      "HYBRID_CAP3"
+    ],
+    "analysis": "descriptive + paired bootstrap CIs; no p-value claims"
+  },
+  "descriptive": {
+    "OFF": {
+      "n": 21,
+      "mean": 22.333,
+      "median": 21.0,
+      "std_population": 3.834,
+      "std_sample": 3.929,
+      "min": 17.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    },
+    "BLIND": {
+      "n": 21,
+      "mean": 23.429,
+      "median": 23.0,
+      "std_population": 3.26,
+      "std_sample": 3.34,
+      "min": 18.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    },
+    "A_TABLE": {
+      "n": 21,
+      "mean": 22.095,
+      "median": 23.0,
+      "std_population": 5.098,
+      "std_sample": 5.224,
+      "min": 10.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    },
+    "C_EVIDENCE": {
+      "n": 21,
+      "mean": 22.0,
+      "median": 23.0,
+      "std_population": 4.995,
+      "std_sample": 5.119,
+      "min": 10.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    },
+    "HYBRID_CAP2": {
+      "n": 21,
+      "mean": 22.857,
+      "median": 23.0,
+      "std_population": 5.007,
+      "std_sample": 5.131,
+      "min": 10.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    },
+    "HYBRID_CAP3": {
+      "n": 21,
+      "mean": 22.0,
+      "median": 23.0,
+      "std_population": 4.995,
+      "std_sample": 5.119,
+      "min": 10.0,
+      "max": 28.0,
+      "note": "n=21 = 7 questions \u00d7 3 seeds; observations within a question share retrieval/context and are not independent."
+    }
+  },
+  "per_question": {
+    "Q1": {
+      "OFF": {
+        "values": [
+          21.0,
+          17.0,
+          21.0
+        ],
+        "mean": 19.667,
+        "std_population": 1.886
+      },
+      "BLIND": {
+        "values": [
+          21.0,
+          25.0,
+          21.0
+        ],
+        "mean": 22.333,
+        "std_population": 1.886
+      },
+      "A_TABLE": {
+        "values": [
+          25.0,
+          21.0,
+          25.0
+        ],
+        "mean": 23.667,
+        "std_population": 1.886
+      },
+      "C_EVIDENCE": {
+        "values": [
+          25.0,
+          21.0,
+          25.0
+        ],
+        "mean": 23.667,
+        "std_population": 1.886
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          25.0,
+          21.0,
+          25.0
+        ],
+        "mean": 23.667,
+        "std_population": 1.886
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          25.0,
+          21.0,
+          25.0
+        ],
+        "mean": 23.667,
+        "std_population": 1.886
+      }
+    },
+    "Q2": {
+      "OFF": {
+        "values": [
+          20.0,
+          28.0,
+          20.0
+        ],
+        "mean": 22.667,
+        "std_population": 3.771
+      },
+      "BLIND": {
+        "values": [
+          20.0,
+          20.0,
+          20.0
+        ],
+        "mean": 20.0,
+        "std_population": 0.0
+      },
+      "A_TABLE": {
+        "values": [
+          20.0,
+          20.0,
+          28.0
+        ],
+        "mean": 22.667,
+        "std_population": 3.771
+      },
+      "C_EVIDENCE": {
+        "values": [
+          20.0,
+          20.0,
+          28.0
+        ],
+        "mean": 22.667,
+        "std_population": 3.771
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          20.0,
+          20.0,
+          28.0
+        ],
+        "mean": 22.667,
+        "std_population": 3.771
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          20.0,
+          20.0,
+          28.0
+        ],
+        "mean": 22.667,
+        "std_population": 3.771
+      }
+    },
+    "Q3": {
+      "OFF": {
+        "values": [
+          21.0,
+          18.0,
+          18.0
+        ],
+        "mean": 19.0,
+        "std_population": 1.414
+      },
+      "BLIND": {
+        "values": [
+          23.0,
+          18.0,
+          21.0
+        ],
+        "mean": 20.667,
+        "std_population": 2.055
+      },
+      "A_TABLE": {
+        "values": [
+          18.0,
+          18.0,
+          21.0
+        ],
+        "mean": 19.0,
+        "std_population": 1.414
+      },
+      "C_EVIDENCE": {
+        "values": [
+          23.0,
+          23.0,
+          28.0
+        ],
+        "mean": 24.667,
+        "std_population": 2.357
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          23.0,
+          23.0,
+          28.0
+        ],
+        "mean": 24.667,
+        "std_population": 2.357
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          23.0,
+          23.0,
+          28.0
+        ],
+        "mean": 24.667,
+        "std_population": 2.357
+      }
+    },
+    "Q4": {
+      "OFF": {
+        "values": [
+          26.0,
+          26.0,
+          26.0
+        ],
+        "mean": 26.0,
+        "std_population": 0.0
+      },
+      "BLIND": {
+        "values": [
+          26.0,
+          26.0,
+          26.0
+        ],
+        "mean": 26.0,
+        "std_population": 0.0
+      },
+      "A_TABLE": {
+        "values": [
+          26.0,
+          26.0,
+          27.0
+        ],
+        "mean": 26.333,
+        "std_population": 0.471
+      },
+      "C_EVIDENCE": {
+        "values": [
+          26.0,
+          26.0,
+          26.0
+        ],
+        "mean": 26.0,
+        "std_population": 0.0
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          26.0,
+          26.0,
+          26.0
+        ],
+        "mean": 26.0,
+        "std_population": 0.0
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          26.0,
+          26.0,
+          26.0
+        ],
+        "mean": 26.0,
+        "std_population": 0.0
+      }
+    },
+    "Q5": {
+      "OFF": {
+        "values": [
+          18.0,
+          18.0,
+          18.0
+        ],
+        "mean": 18.0,
+        "std_population": 0.0
+      },
+      "BLIND": {
+        "values": [
+          27.0,
+          27.0,
+          18.0
+        ],
+        "mean": 24.0,
+        "std_population": 4.243
+      },
+      "A_TABLE": {
+        "values": [
+          27.0,
+          27.0,
+          18.0
+        ],
+        "mean": 24.0,
+        "std_population": 4.243
+      },
+      "C_EVIDENCE": {
+        "values": [
+          18.0,
+          18.0,
+          18.0
+        ],
+        "mean": 18.0,
+        "std_population": 0.0
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          18.0,
+          27.0,
+          27.0
+        ],
+        "mean": 24.0,
+        "std_population": 4.243
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          18.0,
+          18.0,
+          18.0
+        ],
+        "mean": 18.0,
+        "std_population": 0.0
+      }
+    },
+    "Q6": {
+      "OFF": {
+        "values": [
+          28.0,
+          28.0,
+          28.0
+        ],
+        "mean": 28.0,
+        "std_population": 0.0
+      },
+      "BLIND": {
+        "values": [
+          28.0,
+          28.0,
+          28.0
+        ],
+        "mean": 28.0,
+        "std_population": 0.0
+      },
+      "A_TABLE": {
+        "values": [
+          28.0,
+          10.0,
+          10.0
+        ],
+        "mean": 16.0,
+        "std_population": 8.485
+      },
+      "C_EVIDENCE": {
+        "values": [
+          28.0,
+          10.0,
+          10.0
+        ],
+        "mean": 16.0,
+        "std_population": 8.485
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          28.0,
+          10.0,
+          10.0
+        ],
+        "mean": 16.0,
+        "std_population": 8.485
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          28.0,
+          10.0,
+          10.0
+        ],
+        "mean": 16.0,
+        "std_population": 8.485
+      }
+    },
+    "Q7": {
+      "OFF": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      },
+      "BLIND": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      },
+      "A_TABLE": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      },
+      "C_EVIDENCE": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      },
+      "HYBRID_CAP2": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      },
+      "HYBRID_CAP3": {
+        "values": [
+          23.0,
+          23.0,
+          23.0
+        ],
+        "mean": 23.0,
+        "std_population": 0.0
+      }
+    }
+  },
+  "paired_cell_level": {
+    "BLIND_minus_OFF": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": 1.095,
+      "median_diff": 0.0,
+      "sample_std_diff": 3.727,
+      "cohens_dz": 0.294,
+      "bootstrap_95ci_mean": [
+        -0.429,
+        2.714
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 15,
+        "n_pos": 5,
+        "n_neg": 1
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "HYBRID_CAP2_minus_OFF": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": 0.524,
+      "median_diff": 0.0,
+      "sample_std_diff": 7.447,
+      "cohens_dz": 0.07,
+      "bootstrap_95ci_mean": [
+        -2.81,
+        3.429
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 9,
+        "n_pos": 9,
+        "n_neg": 3
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "HYBRID_CAP2_minus_BLIND": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": -0.571,
+      "median_diff": 0.0,
+      "sample_std_diff": 7.033,
+      "cohens_dz": -0.081,
+      "bootstrap_95ci_mean": [
+        -3.714,
+        2.143
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 11,
+        "n_pos": 6,
+        "n_neg": 4
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "HYBRID_CAP2_minus_C_EVIDENCE": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": 0.857,
+      "median_diff": 0.0,
+      "sample_std_diff": 2.707,
+      "cohens_dz": 0.317,
+      "bootstrap_95ci_mean": [
+        0.0,
+        2.143
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 19,
+        "n_pos": 2,
+        "n_neg": 0
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "HYBRID_CAP2_minus_A_TABLE": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": 0.762,
+      "median_diff": 0.0,
+      "sample_std_diff": 3.534,
+      "cohens_dz": 0.216,
+      "bootstrap_95ci_mean": [
+        -0.714,
+        2.286
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 15,
+        "n_pos": 4,
+        "n_neg": 2
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "C_EVIDENCE_minus_BLIND": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": -1.429,
+      "median_diff": 0.0,
+      "sample_std_diff": 6.903,
+      "cohens_dz": -0.207,
+      "bootstrap_95ci_mean": [
+        -4.476,
+        1.238
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 11,
+        "n_pos": 5,
+        "n_neg": 5
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "HYBRID_CAP3_minus_HYBRID_CAP2": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": -0.857,
+      "median_diff": 0.0,
+      "sample_std_diff": 2.707,
+      "cohens_dz": -0.317,
+      "bootstrap_95ci_mean": [
+        -2.143,
+        0.0
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 19,
+        "n_pos": 0,
+        "n_neg": 2
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    },
+    "A_TABLE_minus_OFF": {
+      "unit": "matched (question, seed) cell",
+      "n": 21,
+      "mean_diff": -0.238,
+      "median_diff": 0.0,
+      "sample_std_diff": 7.085,
+      "cohens_dz": -0.034,
+      "bootstrap_95ci_mean": [
+        -3.476,
+        2.524
+      ],
+      "sign_counts": {
+        "n": 21,
+        "n_zero": 9,
+        "n_pos": 8,
+        "n_neg": 4
+      },
+      "caveat": "Cells share question-level retrieval/context; treat CI as descriptive, not confirmatory significance."
+    }
+  },
+  "paired_question_level": {
+    "BLIND_minus_OFF": {
+      "unit": "question-mean (n=7)",
+      "n": 7,
+      "mean_diff": 1.095,
+      "median_diff": 0.0,
+      "sample_std_diff": 2.727,
+      "cohens_dz": 0.402,
+      "bootstrap_95ci_mean": [
+        -0.762,
+        2.952
+      ],
+      "per_question_delta": {
+        "Q1": 2.667,
+        "Q2": -2.667,
+        "Q3": 1.667,
+        "Q4": 0.0,
+        "Q5": 6.0,
+        "Q6": 0.0,
+        "Q7": 0.0
+      },
+      "caveat": "n=7 is too small for confirmatory inference; Q6 can dominate the mean."
+    },
+    "HYBRID_CAP2_minus_OFF": {
+      "unit": "question-mean (n=7)",
+      "n": 7,
+      "mean_diff": 0.524,
+      "median_diff": 0.0,
+      "sample_std_diff": 6.14,
+      "cohens_dz": 0.085,
+      "bootstrap_95ci_mean": [
+        -4.286,
+        3.952
+      ],
+      "per_question_delta": {
+        "Q1": 4.0,
+        "Q2": 0.0,
+        "Q3": 5.667,
+        "Q4": 0.0,
+        "Q5": 6.0,
+        "Q6": -12.0,
+        "Q7": 0.0
+      },
+      "caveat": "n=7 is too small for confirmatory inference; Q6 can dominate the mean."
+    },
+    "HYBRID_CAP2_minus_BLIND": {
+      "unit": "question-mean (n=7)",
+      "n": 7,
+      "mean_diff": -0.571,
+      "median_diff": 0.0,
+      "sample_std_diff": 5.269,
+      "cohens_dz": -0.108,
+      "bootstrap_95ci_mean": [
+        -4.762,
+        2.286
+      ],
+      "per_question_delta": {
+        "Q1": 1.333,
+        "Q2": 2.667,
+        "Q3": 4.0,
+        "Q4": 0.0,
+        "Q5": 0.0,
+        "Q6": -12.0,
+        "Q7": 0.0
+      },
+      "caveat": "n=7 is too small for confirmatory inference; Q6 can dominate the mean."
+    },
+    "C_EVIDENCE_minus_BLIND": {
+      "unit": "question-mean (n=7)",
+      "n": 7,
+      "mean_diff": -1.429,
+      "median_diff": 0.0,
+      "sample_std_diff": 5.636,
+      "cohens_dz": -0.253,
+      "bootstrap_95ci_mean": [
+        -5.619,
+        2.0
+      ],
+      "per_question_delta": {
+        "Q1": 1.333,
+        "Q2": 2.667,
+        "Q3": 4.0,
+        "Q4": 0.0,
+        "Q5": -6.0,
+        "Q6": -12.0,
+        "Q7": 0.0
+      },
+      "caveat": "n=7 is too small for confirmatory inference; Q6 can dominate the mean."
+    },
+    "HYBRID_CAP2_minus_C_EVIDENCE": {
+      "unit": "question-mean (n=7)",
+      "n": 7,
+      "mean_diff": 0.857,
+      "median_diff": 0.0,
+      "sample_std_diff": 2.268,
+      "cohens_dz": 0.378,
+      "bootstrap_95ci_mean": [
+        0.0,
+        2.571
+      ],
+      "per_question_delta": {
+        "Q1": 0.0,
+        "Q2": 0.0,
+        "Q3": 0.0,
+        "Q4": 0.0,
+        "Q5": 6.0,
+        "Q6": 0.0,
+        "Q7": 0.0
+      },
+      "caveat": "n=7 is too small for confirmatory inference; Q6 can dominate the mean."
+    }
+  },
+  "q6_investigation_snapshot": {
+    "semantic_hits": [
+      {
+        "label": "refund_policy.md#2",
+        "similarity": 0.6357170161111889,
+        "distance": 0.3642829838888111
+      },
+      {
+        "label": "refund_policy.md#6",
+        "similarity": 0.6344606163911005,
+        "distance": 0.3655393836088995
+      },
+      {
+        "label": "refund_policy.md#1",
+        "similarity": 0.6154474271457042,
+        "distance": 0.3845525728542958
+      },
+      {
+        "label": "product_documentation.md#3",
+        "similarity": 0.612553697805858,
+        "distance": 0.387446302194142
+      },
+      {
+        "label": "product_documentation.md#6",
+        "similarity": 0.6033084163793592,
+        "distance": 0.39669158362064083
+      }
+    ],
+    "configs": {
+      "OFF": {
+        "neighbors": [],
+        "neighbor_count": 0,
+        "irrelevant_neighbors": [],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 4455,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a refund for defective products."
+          },
+          {
+            "seed": 202,
+            "total": 28,
+            "answer": "According to CONTEXT [3], photographic evidence or a support ticket is required to support the claim of a defective product."
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "answer": "According to CONTEXT [3], photographic evidence or a support ticket is required to support a refund for defective products."
+          }
+        ]
+      },
+      "BLIND": {
+        "neighbors": [
+          {
+            "label": "refund_policy.md#3",
+            "direction": "next",
+            "origin": "refund_policy.md#2",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "refund_policy.md#5",
+            "direction": "previous",
+            "origin": "refund_policy.md#6",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "refund_policy.md#7",
+            "direction": "next",
+            "origin": "refund_policy.md#6",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "refund_policy.md#0",
+            "direction": "previous",
+            "origin": "refund_policy.md#1",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "product_documentation.md#2",
+            "direction": "previous",
+            "origin": "product_documentation.md#3",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "product_documentation.md#4",
+            "direction": "next",
+            "origin": "product_documentation.md#3",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "product_documentation.md#5",
+            "direction": "previous",
+            "origin": "product_documentation.md#6",
+            "reason": "blind_plus_minus_one"
+          },
+          {
+            "label": "product_documentation.md#7",
+            "direction": "next",
+            "origin": "product_documentation.md#6",
+            "reason": "blind_plus_minus_one"
+          }
+        ],
+        "neighbor_count": 8,
+        "irrelevant_neighbors": [
+          "refund_policy.md#3",
+          "refund_policy.md#5",
+          "refund_policy.md#7",
+          "refund_policy.md#0",
+          "product_documentation.md#2",
+          "product_documentation.md#4",
+          "product_documentation.md#5",
+          "product_documentation.md#7"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 8587,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket\n\nAdditionally, it is mentioned that \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\""
+          },
+          {
+            "seed": 202,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket\n\nAdditionally, it is mentioned that \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\""
+          },
+          {
+            "seed": 303,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n- Photographic evidence\n- A support ticket"
+          }
+        ]
+      },
+      "A_TABLE": {
+        "neighbors": [
+          {
+            "label": "refund_policy.md#3",
+            "direction": "next",
+            "origin": "refund_policy.md#2",
+            "reason": "incomplete_table_next"
+          },
+          {
+            "label": "product_documentation.md#7",
+            "direction": "next",
+            "origin": "product_documentation.md#6",
+            "reason": "incomplete_table_next"
+          }
+        ],
+        "neighbor_count": 2,
+        "irrelevant_neighbors": [
+          "refund_policy.md#3",
+          "product_documentation.md#7"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 5235,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support refund requests for defective products."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "answer": "According to CONTEXT [3], for defective products, \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\" However, no specific evidence is mentioned as required for defective products."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "answer": "According to CONTEXT [3], for defective products, \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\" However, no specific evidence is mentioned as required for defective products."
+          }
+        ]
+      },
+      "C_EVIDENCE": {
+        "neighbors": [
+          {
+            "label": "refund_policy.md#3",
+            "direction": "next",
+            "origin": "refund_policy.md#2",
+            "reason": "truncated_table_next"
+          },
+          {
+            "label": "refund_policy.md#5",
+            "direction": "previous",
+            "origin": "refund_policy.md#6",
+            "reason": "truncated_evidence_previous"
+          }
+        ],
+        "neighbor_count": 2,
+        "irrelevant_neighbors": [
+          "refund_policy.md#3",
+          "refund_policy.md#5"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 5653,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ]
+      },
+      "HYBRID_CAP2": {
+        "neighbors": [
+          {
+            "label": "refund_policy.md#3",
+            "direction": "next",
+            "origin": "refund_policy.md#2",
+            "reason": "truncated_table_next"
+          },
+          {
+            "label": "refund_policy.md#5",
+            "direction": "previous",
+            "origin": "refund_policy.md#6",
+            "reason": "truncated_evidence_previous"
+          }
+        ],
+        "neighbor_count": 2,
+        "irrelevant_neighbors": [
+          "refund_policy.md#3",
+          "refund_policy.md#5"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 5653,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ]
+      },
+      "HYBRID_CAP3": {
+        "neighbors": [
+          {
+            "label": "refund_policy.md#3",
+            "direction": "next",
+            "origin": "refund_policy.md#2",
+            "reason": "truncated_table_next"
+          },
+          {
+            "label": "refund_policy.md#5",
+            "direction": "previous",
+            "origin": "refund_policy.md#6",
+            "reason": "truncated_evidence_previous"
+          }
+        ],
+        "neighbor_count": 2,
+        "irrelevant_neighbors": [
+          "refund_policy.md#3",
+          "refund_policy.md#5"
+        ],
+        "primary_in_context": [
+          "refund_policy.md#1"
+        ],
+        "primary_missing_from_context": [],
+        "context_char_len": 5653,
+        "answers": [
+          {
+            "seed": 101,
+            "total": 28,
+            "answer": "According to the provided CONTEXT, photographic evidence or a support ticket is required to support a claim for a defective product."
+          },
+          {
+            "seed": 202,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          },
+          {
+            "seed": 303,
+            "total": 10,
+            "answer": "According to CONTEXT [3], without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items."
+          }
+        ]
+      }
+    }
+  }
+}

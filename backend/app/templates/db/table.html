@@ -2,21 +2,52 @@
 {% block title %}{{ table.name }}{% endblock %}
 {% block heading %}{{ table.name }}{% endblock %}
 {% block content %}
+
+{% if flash_ok %}
+<div class="flash ok">{{ flash_ok }}</div>
+{% endif %}
+{% if flash_error %}
+<div class="flash error">{{ flash_error }}</div>
+{% endif %}
+
 <div class="card">
+  <form class="search-bar" method="get" action="/db/{{ table.name }}">
+    <input
+      type="search"
+      name="q"
+      value="{{ table.search or '' }}"
+      placeholder="Search all columns…"
+      aria-label="Search {{ table.name }}"
+    />
+    <input type="hidden" name="limit" value="{{ table.limit }}" />
+    <button class="btn primary" type="submit">Search</button>
+    {% if table.search %}
+    <a class="btn" href="/db/{{ table.name }}?limit={{ table.limit }}">Clear</a>
+    {% endif %}
+  </form>
+
   <div class="toolbar">
     <div class="meta">
-      Showing
-      <strong>{{ table.offset + 1 }}–{{ table.offset + table.rows|length }}</strong>
-      of <strong>{{ table.total }}</strong> rows
+      {% if table.total == 0 %}
+        No matching rows
+      {% else %}
+        Showing
+        <strong>{{ table.offset + 1 }}–{{ table.offset + table.rows|length }}</strong>
+        of <strong>{{ table.total }}</strong> rows
+        {% if table.search %}
+          for <strong>“{{ table.search }}”</strong>
+        {% endif %}
+      {% endif %}
     </div>
     <div class="pager">
       <a class="btn" {% if not table.has_prev %}disabled{% endif %}
-         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.prev_offset }}">← Prev</a>
+         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.prev_offset }}&q={{ table.search|urlencode }}">← Prev</a>
       <a class="btn" {% if not table.has_next %}disabled{% endif %}
-         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.next_offset }}">Next →</a>
+         href="/db/{{ table.name }}?limit={{ table.limit }}&offset={{ table.next_offset }}&q={{ table.search|urlencode }}">Next →</a>
       <a class="btn primary" href="/db">All tables</a>
     </div>
   </div>
+
   <div class="scroll">
     <table>
       <thead>
@@ -24,6 +55,7 @@
           {% for col in table.columns %}
           <th>{{ col }}</th>
           {% endfor %}
+          <th>Actions</th>
         </tr>
       </thead>
       <tbody>
@@ -38,9 +70,28 @@
             {% endif %}
           </td>
           {% endfor %}
+          <td>
+            <div class="actions">
+              <a class="btn" href="/db/{{ table.name }}/{{ row.id }}/edit">Edit</a>
+              <form
+                method="post"
+                action="/db/{{ table.name }}/{{ row.id }}/delete"
+                onsubmit="return confirm('Delete this row from {{ table.name }}?');"
+              >
+                <input type="hidden" name="q" value="{{ table.search or '' }}" />
+                <input type="hidden" name="limit" value="{{ table.limit }}" />
+                <input type="hidden" name="offset" value="{{ table.offset }}" />
+                <button class="btn ghost-danger" type="submit">Delete</button>
+              </form>
+            </div>
+          </td>
         </tr>
         {% else %}
-        <tr><td colspan="{{ table.columns|length }}">No rows</td></tr>
+        <tr>
+          <td colspan="{{ table.columns|length + 1 }}">
+            No rows{% if table.search %} match your search{% endif %}.
+          </td>
+        </tr>
         {% endfor %}
       </tbody>
     </table>

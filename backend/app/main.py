@@ -7,7 +7,9 @@ from fastapi.responses import RedirectResponse
 
 from app.api.chat import router as chat_router
 from app.api.db_browser import router as db_browser_router
+from app.api.rag import router as rag_router
 from app.api.routes import router
+from app.api.search import router as search_router
 from app.core.config import get_settings
 from app.core.logging import setup_logging
 from app.db.init_db import init_db
@@ -27,15 +29,18 @@ app = FastAPI(
     title=settings.app_name,
     description=(
         "Local-first Enterprise AI Operations Assistant. "
-        "Phase 1 includes LLM chat with Ollama and persistent conversation history."
+        "Phase 1: LLM chat. Phase 2: embeddings ingestion. "
+        "Phase 3: semantic search. Phase 4: RAG grounded answers."
     ),
-    version="0.2.0",
+    version="0.4.0",
     lifespan=lifespan,
 )
 
 app.include_router(router)
 app.include_router(db_browser_router)
 app.include_router(chat_router)
+app.include_router(search_router)
+app.include_router(rag_router)
 
 
 @app.get("/", tags=["root"])
@@ -45,6 +50,8 @@ def root() -> dict[str, str]:
         "message": f"Welcome to {settings.app_name}",
         "db_browser": "/db",
         "chat": "/api/v1/chat",
+        "semantic_search": "/api/v1/search/semantic",
+        "rag_ask": "/api/v1/rag/ask",
         "docs": "/docs",
         "health": "/health",
     }

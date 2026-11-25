@@ -1,0 +1,53 @@
+{% extends "db/base.html" %}
+{% block title %}Edit {{ row.name }}{% endblock %}
+{% block heading %}Edit {{ row.name }}{% endblock %}
+{% block content %}
+
+{% if flash_error %}
+<div class="flash error">{{ flash_error }}</div>
+{% endif %}
+
+<div class="card form-card">
+  <p class="meta" style="margin-top:0;">
+    Row ID: <span class="mono">{{ row.id }}</span>
+  </p>
+
+  <form method="post" action="/db/{{ row.name }}/{{ row.id }}/edit" class="form-grid">
+    {% for col in row.columns %}
+      {% set value = row.row[col] %}
+      {% set meta = row.column_meta[col] %}
+      <label>
+        <strong>{{ col }}</strong>
+        {% if col == 'id' or col == 'created_at' %}
+          <input class="readonly mono" type="text" value="{{ value if value is not none else '' }}" readonly />
+          <span class="hint">Read-only</span>
+        {% elif meta.type in ['Boolean', 'BOOLEAN'] %}
+          <select name="{{ col }}">
+            <option value="true" {% if value == true or value == 'true' %}selected{% endif %}>true</option>
+            <option value="false" {% if value == false or value == 'false' %}selected{% endif %}>false</option>
+            {% if meta.nullable %}
+            <option value="NULL" {% if value is none %}selected{% endif %}>NULL</option>
+            {% endif %}
+          </select>
+        {% elif col in ['description', 'notes', 'address_line', 'shipping_address', 'content', 'subject'] or (value is string and value|length > 80) %}
+          <textarea name="{{ col }}" rows="4">{{ value if value is not none else '' }}</textarea>
+          {% if meta.nullable %}<span class="hint">Leave empty for NULL</span>{% endif %}
+        {% else %}
+          <input
+            class="mono"
+            type="text"
+            name="{{ col }}"
+            value="{{ value if value is not none else '' }}"
+          />
+          {% if meta.nullable %}<span class="hint">Leave empty for NULL</span>{% endif %}
+        {% endif %}
+      </label>
+    {% endfor %}
+
+    <div class="form-actions">
+      <button class="btn primary" type="submit">Save changes</button>
+      <a class="btn" href="/db/{{ row.name }}">Cancel</a>
+    </div>
+  </form>
+</div>
+{% endblock %}

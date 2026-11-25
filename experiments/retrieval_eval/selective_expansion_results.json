@@ -1,0 +1,2424 @@
+{
+  "meta": {
+    "timestamp_utc": "2026-11-24T06:43:01.599800+00:00",
+    "python": "3.14.7",
+    "platform": "macOS-27.0.1-arm64-arm-64bit-Mach-O",
+    "model": "llama3.2",
+    "embedding_model": "nomic-embed-text",
+    "rag_top_k": 5,
+    "rag_min_similarity": 0.5,
+    "rag_temperature": 0.2,
+    "note": "Isolated experiment; production neighbor expansion untouched",
+    "finished_utc": "2026-11-24T06:46:55.180768+00:00"
+  },
+  "questions": {
+    "Q1": {
+      "question": "How long does delivery take?",
+      "primary_relevant": [
+        "delivery_policy.md#1",
+        "delivery_policy.md#2"
+      ],
+      "semantic_hits": [
+        {
+          "label": "delivery_policy.md#6",
+          "similarity": 0.5886832314538155,
+          "distance": 0.4113167685461845
+        },
+        {
+          "label": "delivery_policy.md#4",
+          "similarity": 0.5860633454691765,
+          "distance": 0.4139366545308235
+        },
+        {
+          "label": "delivery_policy.md#1",
+          "similarity": 0.5843168428344223,
+          "distance": 0.4156831571655777
+        },
+        {
+          "label": "delivery_policy.md#0",
+          "similarity": 0.5735826872949229,
+          "distance": 0.4264173127050771
+        },
+        {
+          "label": "delivery_policy.md#5",
+          "similarity": 0.5662605013800094,
+          "distance": 0.4337394986199906
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. However, the exact delivery time may vary depending on the shipping method and the specific order.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4369,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "delivery_policy.md#1"
+          ],
+          "primary_missing_from_context": [
+            "delivery_policy.md#2"
+          ],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#6",
+              "similarity": 0.5886832314538155,
+              "distance": 0.4113167685461845
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.5860633454691765,
+              "distance": 0.4139366545308235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.5843168428344223,
+              "distance": 0.4156831571655777
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "similarity": 0.5735826872949229,
+              "distance": 0.4264173127050771
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.5662605013800094,
+              "distance": 0.4337394986199906
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days. Expedited shipping takes 2-3 business days, and Overnight shipping takes 1 business day.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#7",
+              "direction": "next",
+              "origin": "delivery_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 3,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#7",
+            "delivery_policy.md#3"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5571,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "delivery_policy.md#1",
+            "delivery_policy.md#2"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#6",
+              "similarity": 0.5886832314538155,
+              "distance": 0.4113167685461845
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.5860633454691765,
+              "distance": 0.4139366545308235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.5843168428344223,
+              "distance": 0.4156831571655777
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "similarity": 0.5735826872949229,
+              "distance": 0.4264173127050771
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.5662605013800094,
+              "distance": 0.4337394986199906
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n* Standard Ground: 3-7 business days\n* Expedited: 2-3 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit time provided)\n\nAdditionally, the processing time for in-stock items is within 1-2 business days after payment confirmation, and orders placed after 15:00 local warehouse time are processed the next business day.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4918,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#1",
+            "delivery_policy.md#2"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#6",
+              "similarity": 0.5886832314538155,
+              "distance": 0.4113167685461845
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.5860633454691765,
+              "distance": 0.4139366545308235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.5843168428344223,
+              "distance": 0.4156831571655777
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "similarity": 0.5735826872949229,
+              "distance": 0.4264173127050771
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.5662605013800094,
+              "distance": 0.4337394986199906
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to the provided CONTEXT, the typical transit time for Standard Ground shipping is 3-7 business days.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#3"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 5022,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#1"
+          ],
+          "primary_missing_from_context": [
+            "delivery_policy.md#2"
+          ],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#6",
+              "similarity": 0.5886832314538155,
+              "distance": 0.4113167685461845
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.5860633454691765,
+              "distance": 0.4139366545308235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.5843168428344223,
+              "distance": 0.4156831571655777
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "similarity": 0.5735826872949229,
+              "distance": 0.4264173127050771
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.5662605013800094,
+              "distance": 0.4337394986199906
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to the provided CONTEXT, the typical transit time for different shipping methods are:\n\n* Standard Ground: 3\u20137 business days\n* Expedited: 2\u20133 business days\n* Overnight: Next business day\n* Freight: Scheduled (no specific transit time provided)\n\nAdditionally, orders placed after 15:00 local warehouse time are processed the next business day.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "truncated_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4918,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#1",
+            "delivery_policy.md#2"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#6",
+              "similarity": 0.5886832314538155,
+              "distance": 0.4113167685461845
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.5860633454691765,
+              "distance": 0.4139366545308235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.5843168428344223,
+              "distance": 0.4156831571655777
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "similarity": 0.5735826872949229,
+              "distance": 0.4264173127050771
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.5662605013800094,
+              "distance": 0.4337394986199906
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q2": {
+      "question": "What happens if a package is overdue by seven days?",
+      "primary_relevant": [
+        "delivery_policy.md#4",
+        "delivery_policy.md#5"
+      ],
+      "semantic_hits": [
+        {
+          "label": "delivery_policy.md#4",
+          "similarity": 0.7351325866888765,
+          "distance": 0.2648674133111235
+        },
+        {
+          "label": "delivery_policy.md#1",
+          "similarity": 0.6358889765278402,
+          "distance": 0.36411102347215984
+        },
+        {
+          "label": "delivery_policy.md#5",
+          "similarity": 0.618278665065564,
+          "distance": 0.38172133493443605
+        },
+        {
+          "label": "employee_handbook.md#5",
+          "similarity": 0.6073597265683881,
+          "distance": 0.3926402734316119
+        },
+        {
+          "label": "refund_policy.md#1",
+          "similarity": 0.6056256029365271,
+          "distance": 0.3943743970634729
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to CONTEXT [3], if a package is confirmed lost after 7 calendar days, support agents must offer a replacement or refund.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4449,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.7351325866888765,
+              "distance": 0.2648674133111235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.6358889765278402,
+              "distance": 0.36411102347215984
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.618278665065564,
+              "distance": 0.38172133493443605
+            },
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6073597265683881,
+              "distance": 0.3926402734316119
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6056256029365271,
+              "distance": 0.3943743970634729
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "If a package is overdue by 7 calendar days, support agents must offer a replacement or refund.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#0",
+              "direction": "previous",
+              "origin": "delivery_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#6",
+              "direction": "next",
+              "origin": "delivery_policy.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "direction": "previous",
+              "origin": "employee_handbook.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "direction": "next",
+              "origin": "employee_handbook.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#0",
+              "direction": "previous",
+              "origin": "refund_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#2",
+              "direction": "next",
+              "origin": "refund_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 8,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#3",
+            "delivery_policy.md#0",
+            "delivery_policy.md#2",
+            "delivery_policy.md#6",
+            "employee_handbook.md#4",
+            "employee_handbook.md#6",
+            "refund_policy.md#0",
+            "refund_policy.md#2"
+          ],
+          "irrelevant_neighbor_count": 8,
+          "context_char_len": 8901,
+          "context_block_count": 13,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.7351325866888765,
+              "distance": 0.2648674133111235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.6358889765278402,
+              "distance": 0.36411102347215984
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.618278665065564,
+              "distance": 0.38172133493443605
+            },
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6073597265683881,
+              "distance": 0.3926402734316119
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6056256029365271,
+              "distance": 0.3943743970634729
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#2"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 4998,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.7351325866888765,
+              "distance": 0.2648674133111235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.6358889765278402,
+              "distance": 0.36411102347215984
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.618278665065564,
+              "distance": 0.38172133493443605
+            },
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6073597265683881,
+              "distance": 0.3926402734316119
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6056256029365271,
+              "distance": 0.3943743970634729
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to the provided CONTEXT, if a package is confirmed lost after 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#3"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 5102,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.7351325866888765,
+              "distance": 0.2648674133111235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.6358889765278402,
+              "distance": 0.36411102347215984
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.618278665065564,
+              "distance": 0.38172133493443605
+            },
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6073597265683881,
+              "distance": 0.3926402734316119
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6056256029365271,
+              "distance": 0.3943743970634729
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to CONTEXT [1] and [4], if a package is overdue by 7 calendar days, support agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier within one business day.\n3. Offer a replacement or refund if the package is confirmed lost after 7 calendar days.",
+          "neighbors": [
+            {
+              "label": "delivery_policy.md#2",
+              "direction": "next",
+              "origin": "delivery_policy.md#1",
+              "reason": "truncated_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "delivery_policy.md#2"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 4998,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.7351325866888765,
+              "distance": 0.2648674133111235
+            },
+            {
+              "label": "delivery_policy.md#1",
+              "similarity": 0.6358889765278402,
+              "distance": 0.36411102347215984
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "similarity": 0.618278665065564,
+              "distance": 0.38172133493443605
+            },
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6073597265683881,
+              "distance": 0.3926402734316119
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6056256029365271,
+              "distance": 0.3943743970634729
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q3": {
+      "question": "Can I get a refund if my delivery is late?",
+      "primary_relevant": [
+        "delivery_policy.md#4",
+        "delivery_policy.md#5",
+        "refund_policy.md#3"
+      ],
+      "semantic_hits": [
+        {
+          "label": "refund_policy.md#1",
+          "similarity": 0.6629915331595463,
+          "distance": 0.3370084668404537
+        },
+        {
+          "label": "refund_policy.md#6",
+          "similarity": 0.6376993694219163,
+          "distance": 0.3623006305780837
+        },
+        {
+          "label": "delivery_policy.md#4",
+          "similarity": 0.630011282197843,
+          "distance": 0.36998871780215703
+        },
+        {
+          "label": "refund_policy.md#3",
+          "similarity": 0.5974833584822812,
+          "distance": 0.4025166415177188
+        },
+        {
+          "label": "customer_support_guidelines.md#5",
+          "similarity": 0.5834457221186323,
+          "distance": 0.4165542778813677
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to the provided CONTEXT, an order becomes \"overdue\" when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier \n\nHowever, the CONTEXT does not explicitly state that a refund is automatically granted for late deliveries. It only mentions that an order becomes \"overdue\" and that support agents must escalate it to an Operations Manager if the refund amount exceeds $2,500.\n\nTo determine the refund eligibility for a late delivery, you would need to check the order status, shipment dates, and payment status, and apply the Refund Policy and Delivery Policy before promising outcomes.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4455,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "refund_policy.md#3"
+          ],
+          "primary_missing_from_context": [
+            "delivery_policy.md#5"
+          ],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6629915331595463,
+              "distance": 0.3370084668404537
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6376993694219163,
+              "distance": 0.3623006305780837
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.630011282197843,
+              "distance": 0.36998871780215703
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.5974833584822812,
+              "distance": 0.4025166415177188
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.5834457221186323,
+              "distance": 0.4165542778813677
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to the provided CONTEXT, an order becomes \"overdue\" when the promised delivery date has passed, and no delivery confirmation exists, and the order is still marked as \"shipped\" or \"processing\". However, the CONTEXT does not explicitly state that a refund is automatically granted for late deliveries.\n\nTo determine if you can get a refund for a late delivery, you would need to check the order status, shipment dates, and payment status, and confirm that the delivery was indeed late and that the order is eligible for a refund under the Refund Policy.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#0",
+              "direction": "previous",
+              "origin": "refund_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#2",
+              "direction": "next",
+              "origin": "refund_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "direction": "next",
+              "origin": "delivery_policy.md#4",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#4",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#6",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 9,
+          "irrelevant_neighbors": [
+            "refund_policy.md#0",
+            "refund_policy.md#2",
+            "refund_policy.md#5",
+            "refund_policy.md#7",
+            "delivery_policy.md#3",
+            "refund_policy.md#4",
+            "customer_support_guidelines.md#4",
+            "customer_support_guidelines.md#6"
+          ],
+          "irrelevant_neighbor_count": 8,
+          "context_char_len": 9457,
+          "context_block_count": 14,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5",
+            "refund_policy.md#3"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6629915331595463,
+              "distance": 0.3370084668404537
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6376993694219163,
+              "distance": 0.3623006305780837
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.630011282197843,
+              "distance": 0.36998871780215703
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.5974833584822812,
+              "distance": 0.4025166415177188
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.5834457221186323,
+              "distance": 0.4165542778813677
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to the provided CONTEXT, an order becomes \"overdue\" when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier \n\nThis indicates that a late delivery can lead to an \"overdue\" order, but it does not explicitly state that a refund is automatically granted in such cases. The CONTEXT mentions that refunds are conditional on the order being \"overdue\" and that the refund decision is escalated to an Operations Manager for such cases.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "refund_policy.md#4"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 5002,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "refund_policy.md#3"
+          ],
+          "primary_missing_from_context": [
+            "delivery_policy.md#5"
+          ],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6629915331595463,
+              "distance": 0.3370084668404537
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6376993694219163,
+              "distance": 0.3623006305780837
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.630011282197843,
+              "distance": 0.36998871780215703
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.5974833584822812,
+              "distance": 0.4025166415177188
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.5834457221186323,
+              "distance": 0.4165542778813677
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nIn this case, if your delivery is late, you may be eligible for a refund. However, the refund process would depend on the specific circumstances and the status of your order. \n\nSupport agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier \n3. Offer a replacement or refund if the package is confirmed lost after **7 calendar days**.\n\nIt's also mentioned that if the package is confirmed lost after **7 calendar days**, you may be eligible for a refund. However, the refund policy states that refunds are only available within the standard window (14 calendar days for software licenses and digital products, and 30 calendar days for standard physical products).",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_prev"
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "direction": "next",
+              "origin": "delivery_policy.md#4",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "delivery_policy.md#3",
+              "direction": "previous",
+              "origin": "delivery_policy.md#4",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 4,
+          "irrelevant_neighbors": [
+            "refund_policy.md#7",
+            "refund_policy.md#5",
+            "delivery_policy.md#3"
+          ],
+          "irrelevant_neighbor_count": 3,
+          "context_char_len": 6481,
+          "context_block_count": 9,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5",
+            "refund_policy.md#3"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6629915331595463,
+              "distance": 0.3370084668404537
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6376993694219163,
+              "distance": 0.3623006305780837
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.630011282197843,
+              "distance": 0.36998871780215703
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.5974833584822812,
+              "distance": 0.4025166415177188
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.5834457221186323,
+              "distance": 0.4165542778813677
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to the provided CONTEXT, an order becomes **overdue** when:\n\n1. The promised delivery date has passed, and\n2. No delivery confirmation exists, and\n3. The order is still marked shipped or processing.\n\nSupport agents must:\n\n1. Verify carrier tracking.\n2. Contact the carrier \n3. Offer a replacement or refund if the package is confirmed lost after **7 calendar days**.\n\nHowever, the CONTEXT does not explicitly state that a refund is automatically granted for late deliveries. It only mentions that if the package is confirmed lost after 7 calendar days, a replacement or refund may be offered.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "truncated_evidence_next"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "truncated_evidence_previous"
+            },
+            {
+              "label": "delivery_policy.md#5",
+              "direction": "next",
+              "origin": "delivery_policy.md#4",
+              "reason": "overdue_section_gap_next"
+            },
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "truncated_evidence_next"
+            }
+          ],
+          "neighbor_count": 4,
+          "irrelevant_neighbors": [
+            "refund_policy.md#7",
+            "refund_policy.md#5",
+            "refund_policy.md#4"
+          ],
+          "irrelevant_neighbor_count": 3,
+          "context_char_len": 6375,
+          "context_block_count": 9,
+          "primary_in_context": [
+            "delivery_policy.md#4",
+            "delivery_policy.md#5",
+            "refund_policy.md#3"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6629915331595463,
+              "distance": 0.3370084668404537
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6376993694219163,
+              "distance": 0.3623006305780837
+            },
+            {
+              "label": "delivery_policy.md#4",
+              "similarity": 0.630011282197843,
+              "distance": 0.36998871780215703
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.5974833584822812,
+              "distance": 0.4025166415177188
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.5834457221186323,
+              "distance": 0.4165542778813677
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q4": {
+      "question": "What is the employee PTO notice period?",
+      "primary_relevant": [
+        "employee_handbook.md#4",
+        "employee_handbook.md#5"
+      ],
+      "semantic_hits": [
+        {
+          "label": "employee_handbook.md#5",
+          "similarity": 0.6455876652009652,
+          "distance": 0.3544123347990348
+        },
+        {
+          "label": "employee_handbook.md#2",
+          "similarity": 0.6279233594325544,
+          "distance": 0.3720766405674456
+        },
+        {
+          "label": "employee_handbook.md#4",
+          "similarity": 0.5992630891269014,
+          "distance": 0.4007369108730986
+        },
+        {
+          "label": "employee_handbook.md#6",
+          "similarity": 0.573940867709421,
+          "distance": 0.426059132290579
+        },
+        {
+          "label": "customer_support_guidelines.md#2",
+          "similarity": 0.5572141276063295,
+          "distance": 0.4427858723936705
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4189,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "employee_handbook.md#4",
+            "employee_handbook.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6455876652009652,
+              "distance": 0.3544123347990348
+            },
+            {
+              "label": "employee_handbook.md#2",
+              "similarity": 0.6279233594325544,
+              "distance": 0.3720766405674456
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "similarity": 0.5992630891269014,
+              "distance": 0.4007369108730986
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "similarity": 0.573940867709421,
+              "distance": 0.426059132290579
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "similarity": 0.5572141276063295,
+              "distance": 0.4427858723936705
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to CONTEXT block [1] (employee_handbook.md, chunk_index=5), the employee PTO notice period is at least **7 days** in advance when possible.",
+          "neighbors": [
+            {
+              "label": "employee_handbook.md#1",
+              "direction": "previous",
+              "origin": "employee_handbook.md#2",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "employee_handbook.md#3",
+              "direction": "next",
+              "origin": "employee_handbook.md#2",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "employee_handbook.md#7",
+              "direction": "next",
+              "origin": "employee_handbook.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#1",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#2",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#2",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 5,
+          "irrelevant_neighbors": [
+            "employee_handbook.md#1",
+            "employee_handbook.md#3",
+            "employee_handbook.md#7",
+            "customer_support_guidelines.md#1",
+            "customer_support_guidelines.md#3"
+          ],
+          "irrelevant_neighbor_count": 5,
+          "context_char_len": 6521,
+          "context_block_count": 9,
+          "primary_in_context": [
+            "employee_handbook.md#4",
+            "employee_handbook.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6455876652009652,
+              "distance": 0.3544123347990348
+            },
+            {
+              "label": "employee_handbook.md#2",
+              "similarity": 0.6279233594325544,
+              "distance": 0.3720766405674456
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "similarity": 0.5992630891269014,
+              "distance": 0.4007369108730986
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "similarity": 0.573940867709421,
+              "distance": 0.426059132290579
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "similarity": 0.5572141276063295,
+              "distance": 0.4427858723936705
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to CONTEXT [1], when possible, employees must submit PTO requests at least **7 days** in advance.",
+          "neighbors": [
+            {
+              "label": "customer_support_guidelines.md#3",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#2",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "customer_support_guidelines.md#3"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 4750,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "employee_handbook.md#4",
+            "employee_handbook.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6455876652009652,
+              "distance": 0.3544123347990348
+            },
+            {
+              "label": "employee_handbook.md#2",
+              "similarity": 0.6279233594325544,
+              "distance": 0.3720766405674456
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "similarity": 0.5992630891269014,
+              "distance": 0.4007369108730986
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "similarity": 0.573940867709421,
+              "distance": 0.426059132290579
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "similarity": 0.5572141276063295,
+              "distance": 0.4427858723936705
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to CONTEXT block [1], the employee PTO notice period is at least **7 days** in advance when possible.",
+          "neighbors": [
+            {
+              "label": "employee_handbook.md#3",
+              "direction": "previous",
+              "origin": "employee_handbook.md#4",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "employee_handbook.md#3"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 4844,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "employee_handbook.md#4",
+            "employee_handbook.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6455876652009652,
+              "distance": 0.3544123347990348
+            },
+            {
+              "label": "employee_handbook.md#2",
+              "similarity": 0.6279233594325544,
+              "distance": 0.3720766405674456
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "similarity": 0.5992630891269014,
+              "distance": 0.4007369108730986
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "similarity": 0.573940867709421,
+              "distance": 0.426059132290579
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "similarity": 0.5572141276063295,
+              "distance": 0.4427858723936705
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to the provided CONTEXT, the employee PTO notice period is at least **7 days** in advance when possible.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4189,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "employee_handbook.md#4",
+            "employee_handbook.md#5"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "employee_handbook.md#5",
+              "similarity": 0.6455876652009652,
+              "distance": 0.3544123347990348
+            },
+            {
+              "label": "employee_handbook.md#2",
+              "similarity": 0.6279233594325544,
+              "distance": 0.3720766405674456
+            },
+            {
+              "label": "employee_handbook.md#4",
+              "similarity": 0.5992630891269014,
+              "distance": 0.4007369108730986
+            },
+            {
+              "label": "employee_handbook.md#6",
+              "similarity": 0.573940867709421,
+              "distance": 0.426059132290579
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "similarity": 0.5572141276063295,
+              "distance": 0.4427858723936705
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q5": {
+      "question": "How do I contact customer support?",
+      "primary_relevant": [
+        "customer_support_guidelines.md#0",
+        "customer_support_guidelines.md#1"
+      ],
+      "semantic_hits": [
+        {
+          "label": "customer_support_guidelines.md#0",
+          "similarity": 0.6672719082769157,
+          "distance": 0.33272809172308426
+        },
+        {
+          "label": "refund_policy.md#6",
+          "similarity": 0.6419987205808351,
+          "distance": 0.35800127941916493
+        },
+        {
+          "label": "customer_support_guidelines.md#5",
+          "similarity": 0.6410663591430295,
+          "distance": 0.35893364085697055
+        },
+        {
+          "label": "customer_support_guidelines.md#3",
+          "similarity": 0.5750254971908985,
+          "distance": 0.42497450280910154
+        },
+        {
+          "label": "privacy_policy.md#3",
+          "similarity": 0.5736695395486433,
+          "distance": 0.4263304604513567
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information. The exact steps are not specified in the provided documents, but it is mentioned that you should:\n\n- Use plain language; avoid internal jargon.\n- Never blame the customer.\n- Provide concrete next steps and timelines.\n- Summarize policy citations when denying a request.\n- Offer alternatives (replacement, store credit, etc.)\n\nIt is also implied that you can contact customer support through a support ticket, but the exact process is not specified in the provided documents.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4482,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "customer_support_guidelines.md#0"
+          ],
+          "primary_missing_from_context": [
+            "customer_support_guidelines.md#1"
+          ],
+          "semantic_hits": [
+            {
+              "label": "customer_support_guidelines.md#0",
+              "similarity": 0.6672719082769157,
+              "distance": 0.33272809172308426
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6419987205808351,
+              "distance": 0.35800127941916493
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.6410663591430295,
+              "distance": 0.35893364085697055
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "similarity": 0.5750254971908985,
+              "distance": 0.42497450280910154
+            },
+            {
+              "label": "privacy_policy.md#3",
+              "similarity": 0.5736695395486433,
+              "distance": 0.4263304604513567
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information. The specific steps are as follows:\n\n1. Open a support ticket with category `general_inquiry` or `account` (depending on your issue).\n2. Include the required fields, such as:\n\t* Valid customer reference\n\t* Clear subject line\n\t* Detailed description\n\t* Status and priority\n\t* Category\n\t* Optional linked order number when the issue is order-related\n\t* Assigned support agent (except during intake queue)\n3. Submit the ticket for review by a support agent.\n\nNote that the CONTEXT does not provide a direct phone number or email address for customer support. You will need to submit a support ticket through the NovaForge website or platform.",
+          "neighbors": [
+            {
+              "label": "customer_support_guidelines.md#1",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#0",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#4",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#6",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "customer_support_guidelines.md#2",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "privacy_policy.md#2",
+              "direction": "previous",
+              "origin": "privacy_policy.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "privacy_policy.md#4",
+              "direction": "next",
+              "origin": "privacy_policy.md#3",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 8,
+          "irrelevant_neighbors": [
+            "refund_policy.md#5",
+            "refund_policy.md#7",
+            "customer_support_guidelines.md#4",
+            "customer_support_guidelines.md#6",
+            "customer_support_guidelines.md#2",
+            "privacy_policy.md#2",
+            "privacy_policy.md#4"
+          ],
+          "irrelevant_neighbor_count": 7,
+          "context_char_len": 8962,
+          "context_block_count": 13,
+          "primary_in_context": [
+            "customer_support_guidelines.md#0",
+            "customer_support_guidelines.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "customer_support_guidelines.md#0",
+              "similarity": 0.6672719082769157,
+              "distance": 0.33272809172308426
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6419987205808351,
+              "distance": 0.35800127941916493
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.6410663591430295,
+              "distance": 0.35893364085697055
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "similarity": 0.5750254971908985,
+              "distance": 0.42497450280910154
+            },
+            {
+              "label": "privacy_policy.md#3",
+              "similarity": 0.5736695395486433,
+              "distance": 0.4263304604513567
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category. The specific categories and their typical issues are listed in the \"Ticket Categories\" section of the customer support guidelines.\n\nTo contact customer support, follow these steps:\n\n1. Go to the NovaForge website or access the support portal.\n2. Click on the \"Contact Us\" or \"Open a Ticket\" button.\n3. Select the relevant category for your issue (e.g., \"bill\", \"shipping\", \"product_defect\", \"refund_request\", \"account\", or \"general_inquiry\").\n4. Fill out the required ticket fields, including:\n\t* Valid customer reference\n\t* Clear subject line\n\t* Detailed description\n\t* Status and priority\n\t* Category\n\t* Optional linked order number (if applicable)\n\t* Assigned support agent (if available)\n5. Submit the ticket for review by a customer support agent.\n\nNote that urgent refund disputes above $2,500 must be escalated to an Operations Manager.",
+          "neighbors": [
+            {
+              "label": "customer_support_guidelines.md#1",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#0",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 5043,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "customer_support_guidelines.md#0",
+            "customer_support_guidelines.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "customer_support_guidelines.md#0",
+              "similarity": 0.6672719082769157,
+              "distance": 0.33272809172308426
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6419987205808351,
+              "distance": 0.35800127941916493
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.6410663591430295,
+              "distance": 0.35893364085697055
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "similarity": 0.5750254971908985,
+              "distance": 0.42497450280910154
+            },
+            {
+              "label": "privacy_policy.md#3",
+              "similarity": 0.5736695395486433,
+              "distance": 0.4263304604513567
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and including the required information, such as the order number and reason for the issue. The exact steps are outlined in section [5] of the customer_support_guidelines.md document.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_prev"
+            },
+            {
+              "label": "customer_support_guidelines.md#6",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "customer_support_guidelines.md#4",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 4,
+          "irrelevant_neighbors": [
+            "refund_policy.md#7",
+            "refund_policy.md#5",
+            "customer_support_guidelines.md#6",
+            "customer_support_guidelines.md#4"
+          ],
+          "irrelevant_neighbor_count": 4,
+          "context_char_len": 6532,
+          "context_block_count": 9,
+          "primary_in_context": [
+            "customer_support_guidelines.md#0"
+          ],
+          "primary_missing_from_context": [
+            "customer_support_guidelines.md#1"
+          ],
+          "semantic_hits": [
+            {
+              "label": "customer_support_guidelines.md#0",
+              "similarity": 0.6672719082769157,
+              "distance": 0.33272809172308426
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6419987205808351,
+              "distance": 0.35800127941916493
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.6410663591430295,
+              "distance": 0.35893364085697055
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "similarity": 0.5750254971908985,
+              "distance": 0.42497450280910154
+            },
+            {
+              "label": "privacy_policy.md#3",
+              "similarity": 0.5736695395486433,
+              "distance": 0.4263304604513567
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to the provided CONTEXT, you can contact customer support by opening a support ticket with the correct category and providing the required information. The exact steps are outlined in section 4 of the Customer Support Guidelines:\n\n\"Every ticket must include:\n\n- Valid customer reference\n- Clear subject line\n- Detailed description\n- Status and priority\n- Category\n- Optional linked order number when the issue is order-related\n- Assigned support agent (except during intake queue)\"",
+          "neighbors": [
+            {
+              "label": "customer_support_guidelines.md#1",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#0",
+              "reason": "truncated_table_next"
+            },
+            {
+              "label": "customer_support_guidelines.md#6",
+              "direction": "next",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "truncated_evidence_next"
+            },
+            {
+              "label": "customer_support_guidelines.md#4",
+              "direction": "previous",
+              "origin": "customer_support_guidelines.md#5",
+              "reason": "truncated_evidence_previous"
+            },
+            {
+              "label": "privacy_policy.md#4",
+              "direction": "next",
+              "origin": "privacy_policy.md#3",
+              "reason": "truncated_evidence_next"
+            }
+          ],
+          "neighbor_count": 4,
+          "irrelevant_neighbors": [
+            "customer_support_guidelines.md#6",
+            "customer_support_guidelines.md#4",
+            "privacy_policy.md#4"
+          ],
+          "irrelevant_neighbor_count": 3,
+          "context_char_len": 6817,
+          "context_block_count": 9,
+          "primary_in_context": [
+            "customer_support_guidelines.md#0",
+            "customer_support_guidelines.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "customer_support_guidelines.md#0",
+              "similarity": 0.6672719082769157,
+              "distance": 0.33272809172308426
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6419987205808351,
+              "distance": 0.35800127941916493
+            },
+            {
+              "label": "customer_support_guidelines.md#5",
+              "similarity": 0.6410663591430295,
+              "distance": 0.35893364085697055
+            },
+            {
+              "label": "customer_support_guidelines.md#3",
+              "similarity": 0.5750254971908985,
+              "distance": 0.42497450280910154
+            },
+            {
+              "label": "privacy_policy.md#3",
+              "similarity": 0.5736695395486433,
+              "distance": 0.4263304604513567
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q6": {
+      "question": "What evidence is required for defective products?",
+      "primary_relevant": [
+        "refund_policy.md#1"
+      ],
+      "semantic_hits": [
+        {
+          "label": "refund_policy.md#2",
+          "similarity": 0.6357170161111889,
+          "distance": 0.3642829838888111
+        },
+        {
+          "label": "refund_policy.md#6",
+          "similarity": 0.6344606163911005,
+          "distance": 0.3655393836088995
+        },
+        {
+          "label": "refund_policy.md#1",
+          "similarity": 0.6154474271457042,
+          "distance": 0.3845525728542958
+        },
+        {
+          "label": "product_documentation.md#3",
+          "similarity": 0.612553697805858,
+          "distance": 0.387446302194142
+        },
+        {
+          "label": "product_documentation.md#6",
+          "similarity": 0.6033084163793592,
+          "distance": 0.39669158362064083
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to CONTEXT [3], photographic evidence or a support ticket is required to support a refund for defective products.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4455,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "refund_policy.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#2",
+              "similarity": 0.6357170161111889,
+              "distance": 0.3642829838888111
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6344606163911005,
+              "distance": 0.3655393836088995
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6154474271457042,
+              "distance": 0.3845525728542958
+            },
+            {
+              "label": "product_documentation.md#3",
+              "similarity": 0.612553697805858,
+              "distance": 0.387446302194142
+            },
+            {
+              "label": "product_documentation.md#6",
+              "similarity": 0.6033084163793592,
+              "distance": 0.39669158362064083
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to the provided CONTEXT, for defective products, the following evidence is required:\n\n* Photographic evidence\n* A support ticket",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#3",
+              "direction": "next",
+              "origin": "refund_policy.md#2",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#0",
+              "direction": "previous",
+              "origin": "refund_policy.md#1",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "product_documentation.md#2",
+              "direction": "previous",
+              "origin": "product_documentation.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "product_documentation.md#4",
+              "direction": "next",
+              "origin": "product_documentation.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "product_documentation.md#5",
+              "direction": "previous",
+              "origin": "product_documentation.md#6",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "product_documentation.md#7",
+              "direction": "next",
+              "origin": "product_documentation.md#6",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 8,
+          "irrelevant_neighbors": [
+            "refund_policy.md#3",
+            "refund_policy.md#5",
+            "refund_policy.md#7",
+            "refund_policy.md#0",
+            "product_documentation.md#2",
+            "product_documentation.md#4",
+            "product_documentation.md#5",
+            "product_documentation.md#7"
+          ],
+          "irrelevant_neighbor_count": 8,
+          "context_char_len": 8587,
+          "context_block_count": 13,
+          "primary_in_context": [
+            "refund_policy.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#2",
+              "similarity": 0.6357170161111889,
+              "distance": 0.3642829838888111
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6344606163911005,
+              "distance": 0.3655393836088995
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6154474271457042,
+              "distance": 0.3845525728542958
+            },
+            {
+              "label": "product_documentation.md#3",
+              "similarity": 0.612553697805858,
+              "distance": 0.387446302194142
+            },
+            {
+              "label": "product_documentation.md#6",
+              "similarity": 0.6033084163793592,
+              "distance": 0.39669158362064083
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "According to CONTEXT [3], for defective products, \"No restocking fee applies for defective, damaged, or incorrectly shipped items.\" However, there is no explicit mention of the required evidence for defective products in the provided CONTEXT.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#3",
+              "direction": "next",
+              "origin": "refund_policy.md#2",
+              "reason": "incomplete_table_next"
+            },
+            {
+              "label": "product_documentation.md#7",
+              "direction": "next",
+              "origin": "product_documentation.md#6",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 2,
+          "irrelevant_neighbors": [
+            "refund_policy.md#3",
+            "product_documentation.md#7"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5235,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "refund_policy.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#2",
+              "similarity": 0.6357170161111889,
+              "distance": 0.3642829838888111
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6344606163911005,
+              "distance": 0.3655393836088995
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6154474271457042,
+              "distance": 0.3845525728542958
+            },
+            {
+              "label": "product_documentation.md#3",
+              "similarity": 0.612553697805858,
+              "distance": 0.387446302194142
+            },
+            {
+              "label": "product_documentation.md#6",
+              "similarity": 0.6033084163793592,
+              "distance": 0.39669158362064083
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to CONTEXT [2], photographic evidence or a support ticket is required to support a refund for defective products. Additionally, CONTEXT [5] states that for defective or incorrect items, refunds may be granted outside of the standard refund window when supported by photographic evidence or a support ticket.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_prev"
+            }
+          ],
+          "neighbor_count": 2,
+          "irrelevant_neighbors": [
+            "refund_policy.md#7",
+            "refund_policy.md#5"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5279,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "refund_policy.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#2",
+              "similarity": 0.6357170161111889,
+              "distance": 0.3642829838888111
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6344606163911005,
+              "distance": 0.3655393836088995
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6154474271457042,
+              "distance": 0.3845525728542958
+            },
+            {
+              "label": "product_documentation.md#3",
+              "similarity": 0.612553697805858,
+              "distance": 0.387446302194142
+            },
+            {
+              "label": "product_documentation.md#6",
+              "similarity": 0.6033084163793592,
+              "distance": 0.39669158362064083
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to CONTEXT [3], without defect, no restocking fee applies for defective, damaged, or incorrectly shipped items. However, for defective products, photographic evidence or a support ticket is required.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#3",
+              "direction": "next",
+              "origin": "refund_policy.md#2",
+              "reason": "truncated_table_next"
+            },
+            {
+              "label": "refund_policy.md#5",
+              "direction": "previous",
+              "origin": "refund_policy.md#6",
+              "reason": "truncated_evidence_previous"
+            }
+          ],
+          "neighbor_count": 2,
+          "irrelevant_neighbors": [
+            "refund_policy.md#3",
+            "refund_policy.md#5"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5653,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "refund_policy.md#1"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#2",
+              "similarity": 0.6357170161111889,
+              "distance": 0.3642829838888111
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6344606163911005,
+              "distance": 0.3655393836088995
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6154474271457042,
+              "distance": 0.3845525728542958
+            },
+            {
+              "label": "product_documentation.md#3",
+              "similarity": 0.612553697805858,
+              "distance": 0.387446302194142
+            },
+            {
+              "label": "product_documentation.md#6",
+              "similarity": 0.6033084163793592,
+              "distance": 0.39669158362064083
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    },
+    "Q7": {
+      "question": "What is the refund process?",
+      "primary_relevant": [
+        "refund_policy.md#6"
+      ],
+      "semantic_hits": [
+        {
+          "label": "refund_policy.md#0",
+          "similarity": 0.687589723564591,
+          "distance": 0.312410276435409
+        },
+        {
+          "label": "refund_policy.md#3",
+          "similarity": 0.6867945373931772,
+          "distance": 0.3132054626068228
+        },
+        {
+          "label": "refund_policy.md#1",
+          "similarity": 0.6837835803110174,
+          "distance": 0.3162164196889826
+        },
+        {
+          "label": "refund_policy.md#6",
+          "similarity": 0.6805468446236607,
+          "distance": 0.31945315537633934
+        },
+        {
+          "label": "refund_policy.md#5",
+          "similarity": 0.6509461682013429,
+          "distance": 0.3490538317986571
+        }
+      ],
+      "configs": {
+        "OFF": {
+          "config": "OFF",
+          "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n4. Refunds are processed and may be returned to the original payment method, bank transfer, or card, depending on the payment method used for the original purchase.\n\nAdditionally, the refund process has specific rules and conditions, such as:\n\n* Refund requests must be submitted within the specified window (30 calendar days for standard physical products, 14 calendar days for software licenses and digital products, and 30 calendar days for delivered goods).\n* Urgent refund disputes above $2,500 must be escalated to an Operations Manager.\n* Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n* A restocking fee of 15% may apply to opened but unused products returned without defect.",
+          "neighbors": [],
+          "neighbor_count": 0,
+          "irrelevant_neighbors": [],
+          "irrelevant_neighbor_count": 0,
+          "context_char_len": 4439,
+          "context_block_count": 5,
+          "primary_in_context": [
+            "refund_policy.md#6"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#0",
+              "similarity": 0.687589723564591,
+              "distance": 0.312410276435409
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.6867945373931772,
+              "distance": 0.3132054626068228
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6837835803110174,
+              "distance": 0.3162164196889826
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6805468446236607,
+              "distance": 0.31945315537633934
+            },
+            {
+              "label": "refund_policy.md#5",
+              "similarity": 0.6509461682013429,
+              "distance": 0.3490538317986571
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "BLIND": {
+          "config": "BLIND",
+          "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n4. Refunds are processed based on the order status and product type:\n\t* Standard physical products: refund requests must be submitted within **30 calendar days** of the delivery date.\n\t* Software licenses and digital products: refund requests must be submitted within **14 calendar days** of purchase, and only if the license has not been activated.\n\t* Defective or incorrect items: may be refunded or replaced outside the standard window when supported by photographic evidence or a support ticket.\n5. Refunds are calculated as `line_total + proportional tax \u2212 restocking fee (if applicable)`.\n6. Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n7. A restocking fee of **15%** may apply to opened but unused products returned without defect. No restocking fee applies for defective, damaged, or incorrectly shipped items.\n\nNote that urgent refund disputes above **$2,500** must be escalated to an Operations Manager within one business day.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#2",
+              "direction": "previous",
+              "origin": "refund_policy.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "blind_plus_minus_one"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "blind_plus_minus_one"
+            }
+          ],
+          "neighbor_count": 3,
+          "irrelevant_neighbors": [
+            "refund_policy.md#2",
+            "refund_policy.md#4",
+            "refund_policy.md#7"
+          ],
+          "irrelevant_neighbor_count": 3,
+          "context_char_len": 5810,
+          "context_block_count": 8,
+          "primary_in_context": [
+            "refund_policy.md#6"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#0",
+              "similarity": 0.687589723564591,
+              "distance": 0.312410276435409
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.6867945373931772,
+              "distance": 0.3132054626068228
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6837835803110174,
+              "distance": 0.3162164196889826
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6805468446236607,
+              "distance": 0.31945315537633934
+            },
+            {
+              "label": "refund_policy.md#5",
+              "similarity": 0.6509461682013429,
+              "distance": 0.3490538317986571
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "A_TABLE": {
+          "config": "A_TABLE",
+          "answer": "The refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason for the refund.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n\nNote that the refund process does not specify a timeline for when the refund will be processed. However, it does mention that refunds may be processed within 5-10 business days for bank transfers and 3-5 business days for card refunds.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "incomplete_table_next"
+            }
+          ],
+          "neighbor_count": 1,
+          "irrelevant_neighbors": [
+            "refund_policy.md#4"
+          ],
+          "irrelevant_neighbor_count": 1,
+          "context_char_len": 4986,
+          "context_block_count": 6,
+          "primary_in_context": [
+            "refund_policy.md#6"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#0",
+              "similarity": 0.687589723564591,
+              "distance": 0.312410276435409
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.6867945373931772,
+              "distance": 0.3132054626068228
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6837835803110174,
+              "distance": 0.3162164196889826
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6805468446236607,
+              "distance": 0.31945315537633934
+            },
+            {
+              "label": "refund_policy.md#5",
+              "similarity": 0.6509461682013429,
+              "distance": 0.3490538317986571
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "B_PROCEDURE": {
+          "config": "B_PROCEDURE",
+          "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` and include the order number, product SKUs, and reason.\n2. Wait for an agent to approve or request more information.\n3. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n4. Refunds are processed based on the order status and product category:\n\t* Standard physical products: refund requests must be submitted within 30 calendar days of delivery date.\n\t* Software licenses and digital products: refund requests must be submitted within 14 calendar days of purchase, and only if the license has not been activated.\n\t* Defective or incorrect items: may be refunded or replaced outside the standard window when supported by photographic evidence or a support ticket.\n5. Refunds are calculated as `line_total + proportional tax \u2212 restocking fee (if applicable)`.\n6. Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n7. A restocking fee of 15% may apply to opened but unused products returned without defect.\n\nNote that urgent refund disputes above $2,500 must be escalated to an Operations Manager within one business day.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "incomplete_procedure_next"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "incomplete_procedure_next"
+            }
+          ],
+          "neighbor_count": 2,
+          "irrelevant_neighbors": [
+            "refund_policy.md#4",
+            "refund_policy.md#7"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5159,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "refund_policy.md#6"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#0",
+              "similarity": 0.687589723564591,
+              "distance": 0.312410276435409
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.6867945373931772,
+              "distance": 0.3132054626068228
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6837835803110174,
+              "distance": 0.3162164196889826
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6805468446236607,
+              "distance": 0.31945315537633934
+            },
+            {
+              "label": "refund_policy.md#5",
+              "similarity": 0.6509461682013429,
+              "distance": 0.3490538317986571
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        },
+        "C_EVIDENCE": {
+          "config": "C_EVIDENCE",
+          "answer": "According to the provided CONTEXT, the refund process involves the following steps:\n\n1. Open a support ticket with category `refund_request` (Section 8. How to Request a Refund).\n2. Include the order number, product SKUs, and reason for the refund in the support ticket.\n3. Wait for an agent to approve or request more information.\n4. For delivered goods, obtain a Return Merchandise Authorization (RMA) before shipping items back.\n5. Refunds are processed based on the order status and product category:\n\t* Standard physical products: refund requests must be submitted within **30 calendar days** of delivery date (Section 4. Eligibility Window).\n\t* Software licenses and digital products: refund requests must be submitted within **14 calendar days** of purchase, and only if the license has not been activated.\n\t* Defective or incorrect items: may be refunded or replaced outside the standard window when supported by photographic evidence or a support ticket.\n6. Refunds are calculated as `line_total + proportional tax \u2212 restocking fee (if applicable)` for orders with multiple line items (Section 7. Partial Refunds).\n7. Shipping is refunded only when the entire order is returned, or when the return is caused by a NovaForge error.\n8. A restocking fee of **15%** may apply to opened but unused products returned without defect (Section 7. Restocking Fee). No restocking fee applies for defective, damaged, or incorrectly shipped items.",
+          "neighbors": [
+            {
+              "label": "refund_policy.md#4",
+              "direction": "next",
+              "origin": "refund_policy.md#3",
+              "reason": "truncated_evidence_next"
+            },
+            {
+              "label": "refund_policy.md#7",
+              "direction": "next",
+              "origin": "refund_policy.md#6",
+              "reason": "truncated_evidence_next"
+            }
+          ],
+          "neighbor_count": 2,
+          "irrelevant_neighbors": [
+            "refund_policy.md#4",
+            "refund_policy.md#7"
+          ],
+          "irrelevant_neighbor_count": 2,
+          "context_char_len": 5159,
+          "context_block_count": 7,
+          "primary_in_context": [
+            "refund_policy.md#6"
+          ],
+          "primary_missing_from_context": [],
+          "semantic_hits": [
+            {
+              "label": "refund_policy.md#0",
+              "similarity": 0.687589723564591,
+              "distance": 0.312410276435409
+            },
+            {
+              "label": "refund_policy.md#3",
+              "similarity": 0.6867945373931772,
+              "distance": 0.3132054626068228
+            },
+            {
+              "label": "refund_policy.md#1",
+              "similarity": 0.6837835803110174,
+              "distance": 0.3162164196889826
+            },
+            {
+              "label": "refund_policy.md#6",
+              "similarity": 0.6805468446236607,
+              "distance": 0.31945315537633934
+            },
+            {
+              "label": "refund_policy.md#5",
+              "similarity": 0.6509461682013429,
+              "distance": 0.3490538317986571
+            }
+          ],
+          "model": "llama3.2",
+          "provider": "ollama"
+        }
+      },
+      "semantic_hits_identical_across_configs": true
+    }
+  }
+}

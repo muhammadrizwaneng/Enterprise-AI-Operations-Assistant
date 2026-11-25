@@ -7,6 +7,7 @@ from app.db.session import engine
 from app.models import (  # noqa: F401
     Conversation,
     Customer,
+    DocumentEmbedding,
     Message,
     Order,
     OrderItem,
